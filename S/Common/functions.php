@@ -1,0 +1,223 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: liuho
+ * Date: 2018/4/22
+ * Time: 18:28
+ */
+
+
+// 设置redis，2个参数设置,均用同一个数据库
+function R(){
+    $redis= \S\Redis::getInstance();  // 获取单例
+    $args = func_get_args();
+    switch (func_num_args()){
+        case 1:
+           if(is_array($args[0])){  // 传入一个数组，批量赋值
+               foreach ($args[0] as $k => $v){
+                   $redis->set($k,$v);
+               }
+               return true;
+           }
+           $v = $redis->get($args[0]);  // 取出
+           return $v;
+            break;
+        case 2:
+            $redis->set($args[0],$args[1]);  // 设置
+            return true;
+            break;
+        default:
+            return null;
+    }
+}
+
+
+// 创建一个路由并返回
+function routeInit(){
+    return new \S\Route();
+}
+
+
+// 把如果是
+function allToString($arg){
+    if (is_string($arg)||is_int($arg)) return $arg;
+    if(is_object($arg)||is_array($arg)) $arg = allToArray($arg);
+    return json_encode($arg);
+}
+
+// 把所有都转换为数组
+function allToArray($arg){
+    if(is_object($arg)){
+        $arg = json_decode(json_encode($arg),true);
+    }
+    foreach ($arg as  $v){
+        if(is_object($v)){
+            allToArray($v);
+        }
+    }
+    return $arg;
+}
+
+/*
+  S-Framework 公共函数库
+*/
+/*C函数，读取用户配置，
+   注意：不需要把整个配置文件都读入到一个数组中，会占用内存，在程序中需要用到的地方随时进行读写，所以
+   只需要把读过的配置信息存入一个静态数组中即可
+ */
+
+// 两个参数是设置 ，一个参数是读取
+function C(){
+    $conf = \S\Config::getInstance();
+    $args = func_get_args();
+    switch (func_num_args()) {
+        case 0: //0个参数，读取全部配置
+            return $conf->getAll();
+            break;
+        case 1:   //一个参数，则为读取配置信息的值,如果是数组，为动态设置配置信息的值
+            if (is_array($args[0])){
+                return $conf->setAll($args[0]);
+            }
+            return $conf->get($args[0]);
+            break;
+        case 2:   //两个参数，为设置配置信息的值
+            //echo "2个参数";
+            return $conf->set($args[0],$args[1]);
+            break;
+        default:
+            break;
+    }
+}
+function I($a){
+    $b = array_merge($_GET,$_POST);
+    return $b[$a];
+}
+function get($a){
+    return $_GET[$a];
+}
+function post($a){
+    return $_POST[$a];
+}
+function dump($arr){
+    if (is_array($arr)){
+        echo '<pre>';
+        print_r($arr);
+        echo '</pre>';
+    }else{
+        echo $arr;
+    }
+}
+function M($table_name,$dsn = null){
+    if (is_null($dsn)){
+        $obj = \S\Model::getInstance($table_name);
+    }
+    return $obj;
+}
+function import($str){
+    $path = C('extend_path') . $str;
+    if (file_exists($path)){
+        require $path;
+        return true;
+    }else{
+        throw new \S\S_Exception('您要导入的类文件不存在！');
+    }
+}
+function lib($str){
+    //这个方法和import类似，用于导入系统内置的类
+    $path = S_PATH . 'S/lib/'.$str.'.php';
+    if (file_exists($path)){
+        require $path;
+        return true;
+    }else{
+        throw new \S\S_Exception("您要导入的内置类不存在！");
+    }
+}
+function session($parm1,$parm2 = null){
+    if (is_null($parm2)){
+        if (isset($_SESSION[$parm1])){
+            return $_SESSION[$parm1];
+        }else{
+            return false;
+        }
+    }else{
+        $_SESSION[$parm1] = $parm2;
+        return true;
+    }
+}
+function redirect($url, $time=0, $msg='') {
+    if ($url!=$_SERVER['HTTP_REFERER']){
+        $url = __ROOT__.$url;
+    }
+    if (empty($msg)){
+        $msg    = "系统将在{$time}秒之后自动跳转到{$url}！";
+    }
+    if (!headers_sent()) {
+        // redirect
+        if (0 === $time) {
+            header('Location: ' . $url);
+        } else {
+            header('refresh:'.$time .';url=' . $url);
+            echo($msg);
+        }
+        exit();
+    } else {
+        $str    = "<meta http-equiv=\'Refresh\' content=\'".$time .";URL=". $url . "\'>";
+        if ($time != 0)
+            $str .= $msg;
+        exit($str);
+    }
+}
+function error($str="出错了！",$time=5,$url=null){
+    $url = getURL();
+    //提示错误信息，跳转时间
+    echo "<script>alert('$str');history.go(-1);</script>";
+}
+function success($msg=null,$url=null,$time=5){
+//    dump($_SERVER['HTTP_REFERER']);
+    redirect($_SERVER['HTTP_REFERER'],$time,$msg);
+}
+function isAjax(){
+    if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest'){
+        return true;
+    }else{
+        return false;
+    }
+}
+function isGet(){
+    return $_SERVER['REQUEST_METHOD'] == 'GET' ? true : false;
+}
+function isPost() {
+    return ($_SERVER['REQUEST_METHOD'] == 'POST'  && (empty($_SERVER['HTTP_REFERER']) || preg_replace("~https?:\/\/([^\:\/]+).*~i", "\\1", $_SERVER['HTTP_REFERER']) == preg_replace("~([^\:]+).*~", "\\1", $_SERVER['HTTP_HOST']))) ? 1 : 0;
+}
+//得到客户端ip
+function getIP()
+{
+    global $ip;
+    if (getenv("HTTP_CLIENT_IP"))
+        $ip = getenv("HTTP_CLIENT_IP");
+    else if(getenv("HTTP_X_FORWARDED_FOR"))
+        $ip = getenv("HTTP_X_FORWARDED_FOR");
+    else if(getenv("REMOTE_ADDR"))
+        $ip = getenv("REMOTE_ADDR");
+    else $ip = "Unknow";
+    return $ip;
+}
+// 说明：获取完整URL
+function getURL()
+{
+    $pageURL = 'http';
+    if (isset($_SERVER["HTTPS"])&&$_SERVER["HTTPS"] == "on")
+    {
+        $pageURL .= "s";
+    }
+    $pageURL .= "://";
+    if ($_SERVER["SERVER_PORT"] != "80")
+    {
+        $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
+    }
+    else
+    {
+        $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+    }
+    return $pageURL;
+}
