@@ -65,7 +65,6 @@ function allToArray($arg){
    注意：不需要把整个配置文件都读入到一个数组中，会占用内存，在程序中需要用到的地方随时进行读写，所以
    只需要把读过的配置信息存入一个静态数组中即可
  */
-
 // 两个参数是设置 ，一个参数是读取
 function C(){
     $conf = \S\Config::getInstance();
@@ -88,136 +87,58 @@ function C(){
             break;
     }
 }
-function I($a){
-    $b = array_merge($_GET,$_POST);
-    return $b[$a];
-}
-function get($a){
-    return $_GET[$a];
-}
-function post($a){
-    return $_POST[$a];
-}
-function dump($arr){
-    if (is_array($arr)){
-        echo '<pre>';
-        print_r($arr);
-        echo '</pre>';
+
+
+// 设置session
+function session(swoole_http_request $request,$parm1,$parm2 = null){
+    // 两个参数是读取，三个参数是设置，第一个传入request
+    if(is_null($parm2)){  // 读取
+        return \S\Session::getValue($request,$parm1);
     }else{
-        echo $arr;
+        // 设置
+        return \S\Session::setValue($request,$parm1,$parm2);
     }
 }
-function M($table_name,$dsn = null){
-    if (is_null($dsn)){
-        $obj = \S\Model::getInstance($table_name);
-    }
-    return $obj;
+
+
+// 获取Template的单例
+function temp(){
+   return \S\Template::getInstance();
 }
-function import($str){
-    $path = C('extend_path') . $str;
-    if (file_exists($path)){
-        require $path;
-        return true;
-    }else{
-        throw new \S\S_Exception('您要导入的类文件不存在！');
-    }
+
+// 项目根目录
+function root_path(){
+    return  dirname(dirname(dirname(__FILE__)));
 }
-function lib($str){
-    //这个方法和import类似，用于导入系统内置的类
-    $path = S_PATH . 'S/lib/'.$str.'.php';
-    if (file_exists($path)){
-        require $path;
-        return true;
-    }else{
-        throw new \S\S_Exception("您要导入的内置类不存在！");
+
+// 操作redis，第一个是数据库编号
+function RD(){
+    $args = func_get_args();  // 获取参数
+    $redis = new \S\Redis($args[0]); // 获取redis实例（非单例）
+    switch (count($args)){
+        case 2:
+            // 获取或者批量设置
+            if(is_array($args[1])){
+                // 批量设置
+                foreach ($args[1] as $k => $v){
+                    $redis->set($k,$v);
+                }
+            }
+            // 获取
+            return $redis->get($args[1]);
+            break;
+        case 3:
+            // 单独设置
+            $redis->set($args[1],$args[2]);
+            break;
+        case 4:
+            // 第四个参数是 删除
+            if($args[3]=='delete'){
+                $redis->delete($args[1]);  // 传入的第二个参数会被销毁，第三个参数任意
+            }
+            break;
+        default:
+            break;
     }
-}
-function session($parm1,$parm2 = null){
-    if (is_null($parm2)){
-        if (isset($_SESSION[$parm1])){
-            return $_SESSION[$parm1];
-        }else{
-            return false;
-        }
-    }else{
-        $_SESSION[$parm1] = $parm2;
-        return true;
-    }
-}
-function redirect($url, $time=0, $msg='') {
-    if ($url!=$_SERVER['HTTP_REFERER']){
-        $url = __ROOT__.$url;
-    }
-    if (empty($msg)){
-        $msg    = "系统将在{$time}秒之后自动跳转到{$url}！";
-    }
-    if (!headers_sent()) {
-        // redirect
-        if (0 === $time) {
-            header('Location: ' . $url);
-        } else {
-            header('refresh:'.$time .';url=' . $url);
-            echo($msg);
-        }
-        exit();
-    } else {
-        $str    = "<meta http-equiv=\'Refresh\' content=\'".$time .";URL=". $url . "\'>";
-        if ($time != 0)
-            $str .= $msg;
-        exit($str);
-    }
-}
-function error($str="出错了！",$time=5,$url=null){
-    $url = getURL();
-    //提示错误信息，跳转时间
-    echo "<script>alert('$str');history.go(-1);</script>";
-}
-function success($msg=null,$url=null,$time=5){
-//    dump($_SERVER['HTTP_REFERER']);
-    redirect($_SERVER['HTTP_REFERER'],$time,$msg);
-}
-function isAjax(){
-    if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest'){
-        return true;
-    }else{
-        return false;
-    }
-}
-function isGet(){
-    return $_SERVER['REQUEST_METHOD'] == 'GET' ? true : false;
-}
-function isPost() {
-    return ($_SERVER['REQUEST_METHOD'] == 'POST'  && (empty($_SERVER['HTTP_REFERER']) || preg_replace("~https?:\/\/([^\:\/]+).*~i", "\\1", $_SERVER['HTTP_REFERER']) == preg_replace("~([^\:]+).*~", "\\1", $_SERVER['HTTP_HOST']))) ? 1 : 0;
-}
-//得到客户端ip
-function getIP()
-{
-    global $ip;
-    if (getenv("HTTP_CLIENT_IP"))
-        $ip = getenv("HTTP_CLIENT_IP");
-    else if(getenv("HTTP_X_FORWARDED_FOR"))
-        $ip = getenv("HTTP_X_FORWARDED_FOR");
-    else if(getenv("REMOTE_ADDR"))
-        $ip = getenv("REMOTE_ADDR");
-    else $ip = "Unknow";
-    return $ip;
-}
-// 说明：获取完整URL
-function getURL()
-{
-    $pageURL = 'http';
-    if (isset($_SERVER["HTTPS"])&&$_SERVER["HTTPS"] == "on")
-    {
-        $pageURL .= "s";
-    }
-    $pageURL .= "://";
-    if ($_SERVER["SERVER_PORT"] != "80")
-    {
-        $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
-    }
-    else
-    {
-        $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
-    }
-    return $pageURL;
+    return true;
 }

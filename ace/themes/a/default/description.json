@@ -1,0 +1,11 @@
+{
+  "name" : "default",
+  "description": "默认的主题",
+  "require":{
+    "models":[],
+    "plugins":[],
+    "components":[],
+    "tags":[]
+  },
+  "version":"v1.0"
+}

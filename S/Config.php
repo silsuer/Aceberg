@@ -33,14 +33,16 @@ class Config
     private function __construct()
     {
         // 引入配置文件
-        $config = json_decode(file_get_contents("../.env"),true);
+        $config = json_decode(file_get_contents(root_path() . '/.env'),true);
+
         // 根据配置文件，建立redis数据库，把数据存入
         $cfg = [
             'host' => $config['REDIS_HOST'],
             'port' => $config['REDIS_PORT'],
-            'database' => $config['CORE_DB']
+            'database' => $config['REDIS_DB']
         ];
         $redis = new Client($cfg);
+
         foreach ($config as $k => $v) {
             $redis->set($k,$v);
         }

@@ -28,15 +28,22 @@ class Redis
 
     public function __construct()
     {
+        $args = func_get_args();
+        if(count($args)!=0){
+            // 传入的是数据库编号
+            $num = $args[0];
+        }else{
+            $num = C('REDIS_DB');
+        }
         // 这里写redis连接操作
         // php数组是哈希表
         // 建立Redis连接
         $config = [
             'host' => C('REDIS_HOST'),
             'port' => C('REDIS_PORT'),
-            'database' => C('REDIS_DB')
+            'database' => $num
         ];
-        $this->redis = new Client($config);
+        $this->redis = new Client($config);  // 建立数据库连接
     }
 
     // 把数据存入redis
@@ -47,6 +54,9 @@ class Redis
 
     public function get($key){
        return  $this->redis->get($key);
+    }
 
+    public function delete($key){
+        $this->redis->del($key);
     }
 }
