@@ -70,4 +70,11 @@ class Associator extends BaseModel
         'type' => 'string',
         'view' => 'timer',
     ];
+
+    public function install()
+    {
+        // 安装的时候，建立一张存储每一个会员模块配置的表，在添加模块的时候，触发一个函数，在模块配置表中也加一项，默认写一些配置
+
+        parent::install();
+    }
 }
