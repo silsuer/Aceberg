@@ -243,7 +243,10 @@
 
             // 监听上移按钮
             $(document).on('click', 'table tbody tr', function (e) {
+
                 var $tr = $(e.target);
+                console.log($tr);
+                
                 if (!$tr.is('tr')) {
                     $tr = $tr.parents('tr');
                 }
