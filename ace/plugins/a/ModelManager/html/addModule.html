@@ -242,7 +242,7 @@
 
 
             // 监听上移按钮
-            $('.moveUp').on('click', 'table tbody tr', function (e) {
+            $(document).on('click', 'table tbody tr', function (e) {
                 var $tr = $(e.target);
                 if (!$tr.is('tr')) {
                     $tr = $tr.parents('tr');
