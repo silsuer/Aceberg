@@ -241,42 +241,42 @@
 
 
 
-            // 监听上移按钮
+            // 监听上移和下移按钮
             $(document).on('click', 'table tbody tr', function (e) {
 
                 var $tr = $(e.target);
-                if($tr.is('.moveUp')){
+                if (!$tr.is('tr')) {
+                    $tr = $tr.parents('tr');
+                }
+                if ($tr.is('.moveUp')) {
                     layer.msg('上移了');
-                }
-                // console.log($tr);
-                
-                if (!$tr.is('tr')) {
-                    $tr = $tr.parents('tr');
-                }
-                var $prev = $tr.prev();
-                if($prev == undefined || $prev == null){
-                    return false;
-                }
-                var html = $tr.prop("outerHTML");
-                $tr.remove();
-                $(html).insertBefore($prev);
-            })
 
-            // 监听下移按钮
-            $('.moveDown').on('click', 'table tbody tr', function (e) {
-                var $tr = $(e.target);
-                if (!$tr.is('tr')) {
-                    $tr = $tr.parents('tr');
-                }
-                var $next = $tr.next();
-                if($next == undefined || $prev == null){
-                    return false;
-                }
-                var html = $tr.prop("outerHTML");
-                $tr.remove();
-                $(html).insertAfter($next);
-            })
+                    var $prev = $tr.prev();
+                    console.log($prev);
+                    
+                    if ($prev == undefined || $prev == null) {
+                        return false;
+                    }
+                    var html = $tr.prop("outerHTML");
+                    $tr.remove();
+                    $(html).insertBefore($prev);
 
+                } else if ($tr.is('.moveDown')) {
+                    layer.msg('下移了');
+
+                    var $next = $tr.next();
+                    console.log($next);
+                    if ($next == undefined || $next == null) {
+                        return false;
+                    }
+                    var html = $tr.prop("outerHTML");
+                    $tr.remove();
+                    $(html).insertAfter($next);
+
+                }
+
+
+            })
 
 
 
