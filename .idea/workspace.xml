@@ -1,208 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56ba4bdb-10e5-4787-a76c-bb25cbe87f87" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/components/a/admin_login/admin_login.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/components/a/admin_login/description.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/components/a/if_login/description.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/components/a/if_login/if_login.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/models/a/ArticleContent/ArticleContent.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/models/a/ArticleContent/description.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/AdminManager/AdminManager.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/AdminManager/description.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/AdminManager/html/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/AdminManager/html/main.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/MenuManager/MenuManager.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/MenuManager/description.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/MenuManager/html/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/ModelManager/AddRelationCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/ModelManager/BaseModel.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/ModelManager/MakeModuleCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/ModelManager/ModelInstallCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/ModelManager/ModelManager.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/ModelManager/description.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/PermissionManager/PermissionManager.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/PermissionManager/description.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/tags/a/getDoc/description.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/tags/a/getDoc/getDoc.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/tags/a/getInfo/description.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ace/tags/a/getInfo/getInfo.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/BaseModel.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/BasePlugin.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Console/Commands/DocCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Console/Commands/ExampleCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Console/Commands/InstallPlugin.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Console/Commands/MakeComponent.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Console/Commands/TestCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/DocController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/GlobalObj.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Relation.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/css/index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/css/public.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/alipay.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/close.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/code.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/face.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/fly.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/git.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/layui.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/login_bg.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/mayun.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/userface1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/userface2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/userface3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/userface4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/userface5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/wechat.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/js/address.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/js/bodyTab.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/js/cache.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/js/cacheUserInfo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/js/global.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/js/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/js/login.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/js/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/address.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/images.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/linkList.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/linkLogo.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/logs.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/navs.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/newsImg.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/newsList.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/systemParameter.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/userGrade.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/userList.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/json/userface.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/layui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/layui.mobile.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/modules/code.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/modules/laydate/default/laydate.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/modules/layer/default/icon-ext.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/modules/layer/default/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/modules/layer/default/layer.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/modules/layer/default/loading-0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/modules/layer/default/loading-1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/css/modules/layer/default/loading-2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/font/iconfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/font/iconfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/font/iconfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/font/iconfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/10.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/11.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/12.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/13.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/14.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/15.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/16.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/17.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/18.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/19.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/20.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/21.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/22.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/23.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/24.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/25.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/26.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/27.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/28.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/29.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/3.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/30.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/31.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/32.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/33.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/34.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/35.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/36.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/37.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/38.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/39.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/4.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/40.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/41.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/42.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/43.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/44.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/45.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/46.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/47.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/48.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/49.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/5.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/50.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/51.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/52.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/53.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/54.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/55.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/56.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/57.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/58.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/59.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/6.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/60.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/61.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/62.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/63.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/64.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/65.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/66.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/67.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/68.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/69.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/7.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/70.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/71.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/8.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/images/face/9.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/carousel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/code.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/element.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/flow.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/form.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/jquery.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/laydate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/layedit.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/layer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/laypage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/laytpl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/mobile.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/table.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/tree.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/upload.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/lay/modules/util.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/layui.all.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/layui/layui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/page/doc.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/migrations-db.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/migrations.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sword" />
-      <change beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
-      <change beforePath="$PROJECT_DIR$/.idea/Aceberg.iml" afterPath="$PROJECT_DIR$/.idea/Aceberg.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/S/Common/Cache/pluginCache/f7/f7f59a53e86ef6888c4a8b26e48349d57eba5bd66090bf7e2590095536eb91ec.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/S/Common/functions.php" afterPath="$PROJECT_DIR$/S/Common/functions.php" />
-      <change beforePath="$PROJECT_DIR$/S/Session.php" afterPath="$PROJECT_DIR$/S/Session.php" />
-      <change beforePath="$PROJECT_DIR$/S/Template.php" afterPath="$PROJECT_DIR$/S/Template.php" />
-      <change beforePath="$PROJECT_DIR$/Server.php" afterPath="$PROJECT_DIR$/Server.php" />
-      <change beforePath="$PROJECT_DIR$/ace/plugins/a/AdminManager/html/index.html" afterPath="$PROJECT_DIR$/ace/plugins/a/AdminManager/html/index.html" />
-      <change beforePath="$PROJECT_DIR$/ace/themes/a/default/description.json" afterPath="$PROJECT_DIR$/ace/themes/a/default/description.json" />
-      <change beforePath="$PROJECT_DIR$/ace/themes/a/default/html/index.html" afterPath="$PROJECT_DIR$/ace/themes/a/default/html/index.html" />
-      <change beforePath="$PROJECT_DIR$/app/Controller/Controller.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-    </list>
+    <list default="true" id="56ba4bdb-10e5-4787-a76c-bb25cbe87f87" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,94 +25,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ace/plugins/a/AdminManager/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3726">
-              <caret line="162" column="33" lean-forward="false" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="33" />
-              <folding>
-                <marker date="1524790995106" expanded="true" signature="11028:11036" ph="..." />
-                <marker date="1524790995106" expanded="true" signature="12349:12397" ph="..." />
-                <marker date="1524790995106" expanded="true" signature="12522:12570" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navs.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/json/navs.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2323">
-              <caret line="101" column="14" lean-forward="false" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="description.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ace/plugins/a/AdminManager/description.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="description.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ace/plugins/a/MenuManager/description.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ace/plugins/a/MenuManager/MenuManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-              <folding>
-                <element signature="e#126#172#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstallPlugin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Console/Commands/InstallPlugin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="47" column="37" lean-forward="false" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasePlugin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/BasePlugin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ace/plugins/a/AdminManager/AdminManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -484,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -501,13 +212,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yingxiao" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="SearchEverywhereHistoryKey" value="Temp&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;Com&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/Console/Commands/DocCommand.php&#10;DocC&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/Console/Commands/DocCommand.php&#10;main&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;doc&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/doc.html&#10;Template&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;doc.h&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/doc.html&#10;main.h&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;Global&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;func&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;.env&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/.env&#10;Server&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/Server.php&#10;main.js&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/js/main.js&#10;function&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;Templa&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;Tem&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;navs&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/json/navs.json&#10;index.js&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/js/index.js&#10;index&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;in&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;index.&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;Serv&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/Server.php&#10;main.ht&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;glo&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;admin_login&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/components/a/admin_login/admin_login.php&#10;global&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;functions&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;Glo&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;login.js&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/js/login.js&#10;ORM.php&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/ORM.php&#10;index.html&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;index.ht&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;sess&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Session.php&#10;server&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/Server.php&#10;fun&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;Config&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/config.php" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -561,17 +273,17 @@
       <workItem from="1524715886766" duration="41552000" />
       <workItem from="1524771938643" duration="84393000" />
       <workItem from="1525063494097" duration="1273000" />
+      <workItem from="1525250937243" duration="122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208513000" />
+    <option name="totallyTimeSpent" value="208635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20619336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20921451" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -714,7 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,8 +651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/json/navs.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2323">
-          <caret line="101" column="14" lean-forward="false" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
+        <state relative-caret-position="2300">
+          <caret line="100" column="14" lean-forward="false" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -951,7 +662,7 @@
         <state relative-caret-position="644">
           <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
           <folding>
-            <element signature="e#126#172#0#PHP" expanded="true" />
+            <element signature="e#126#172#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -966,8 +677,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ace/plugins/a/MenuManager/description.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="385">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding />
         </state>
       </provider>
