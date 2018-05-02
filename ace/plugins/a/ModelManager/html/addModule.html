@@ -245,15 +245,17 @@
             $(document).on('click', 'table tbody tr', function (e) {
 
                 var $tr = $(e.target);
-                if (!$tr.is('tr')) {
-                    $tr = $tr.parents('tr');
-                }
+
                 if ($tr.is('.moveUp')) {
                     layer.msg('上移了');
 
+                    if (!$tr.is('tr')) {
+                        $tr = $tr.parents('tr');
+                    }
+
                     var $prev = $tr.prev();
                     console.log($prev);
-                    
+
                     if ($prev == undefined || $prev == null) {
                         return false;
                     }
@@ -263,6 +265,10 @@
 
                 } else if ($tr.is('.moveDown')) {
                     layer.msg('下移了');
+
+                    if (!$tr.is('tr')) {
+                        $tr = $tr.parents('tr');
+                    }
 
                     var $next = $tr.next();
                     console.log($next);
