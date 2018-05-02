@@ -1,0 +1,23 @@
+{
+  "name": "AdminManager",
+  "namespace": "Ace\\plugins\\a\\AdminManager\\AdminManager",
+  "type": "plugin",
+  "author": "silsuer",
+  "description": "后台管理插件",
+  "depends": {
+    "models": {},
+    "plugins": {
+      "a/MenuManager":"1.0"
+    },
+    "components": {
+      "a/admin_login": "1.0",
+      "a/if_login": "1.0",
+      "a/updateTableConstructs": "1.0"
+    },
+    "tags": {
+    },
+    "macro": {
+    }
+  },
+  "version": "1.0"
+}

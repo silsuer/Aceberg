@@ -1,0 +1,6 @@
+{
+  "name":"if_login",
+  "namespace":"Ace\\components\\a\\if_login\\if_login",
+  "description":"判断用户是否登陆，如果未登录，跳转到登录页，一般用于需要用户登陆的位置",
+  "version":"1.0"
+}

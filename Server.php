@@ -8,24 +8,29 @@
 
 class Server
 {
-    public $routesList = [];  // 路由数组
-
+    public static $routesList = [];  // 路由数组
+    public static $info = '';
     public function __construct()
     {
         // 注册路由,做所有初始化的功能
-        $this->routesList["/admin"] = routeInit()->setMethod("get")->setTarget("App\Controller\Controller@welcome");
-        $this->routesList["/home"] = routeInit()->setMethod("get")->setTarget("App\Controller\Controller@home");
+//        $this->routesList["/admin"] = routeInit()->setMethod("get")->setTarget("App\Controller\Controller@welcome");
+//        $this->routesList["/home"] = routeInit()->setMethod("get")->setTarget("App\Controller\Controller@home");
     }
 
 
     public function start()
     {
+        // 初始化数据
+        \S\Template::organizeTree();
+
         // 显示欢迎页面
         $this->welcome();
+        echo self::$info;  // 打印，用来在其他方法使用的时候在控制台打印出一些数据
         // 开启一个http服务
         $http = new swoole_http_server("0.0.0.0", 35335);
         $http->on("request", function ($request, $response) {
-             if ($request->server['request_uri']=='/favicon.ico'){
+//             echo md5('admin');       21232f297a57a5a743894a0e4a801fc3
+              if ($request->server['request_uri']=='/favicon.ico'){
                  $response->end("");
                  return;
              }
@@ -36,14 +41,12 @@ class Server
                  $response = $rq["response"];  // 把执行结果重新拆分赋值
              }
 
-
-
             // 一个请求，创建一个对象，把request和respone放进去，
             // 根据请求，解析url，拼装成request对象和redis对象
             // 如果注册了路由，才会去寻找
-            if (array_key_exists($request->server['request_uri'], $this->routesList)) {
+            if (array_key_exists($request->server['request_uri'], self::$routesList)) {
                 // 存在这个路由，直接执行handle函数，执行对应控制器里的方法
-                $this->routesList[$request->server['request_uri']]->handle($request, $response);
+                self::$routesList[$request->server['request_uri']]->handle($request, $response);
             } else {
                 // 解析uri
                 \S\Template::parseUrl($request,$response);
@@ -82,12 +85,14 @@ class Server
             if(is_null($session)){
                 $rrq = $this->setSess($request,$response);
                 return $rrq;
-            }
-            if ($session->expire > time()) {  // 没过期
-                $session->expire = time() + C('SESSION_LIFE_TIME');
-                $response->rawCookie(C('SESSION_NAME'), $session->key, time() + C('SESSION_LIFE_TIME'));
-            } else {  // 过期，销毁session
-                $session->destory($session->key);
+            }else{
+                if(is_object($session)){
+                    if ($session->expire > time()) {  // 没过期
+                        $session->expire = time() + C('SESSION_LIFE_TIME');
+                        $response->rawCookie(C('SESSION_NAME'), $session->key, time() + C('SESSION_LIFE_TIME'));
+                    }
+                }
+
             }
         }
         return ["request" => $request, "response" => $response];  // 返回执行成功的数据

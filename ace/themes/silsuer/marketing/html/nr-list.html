@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery1.9.1.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<style type="text/css">
+/*css digg style pagination*/
+div.digg {
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 3px;
+	margin: 3px;
+	padding-top: 30px;
+	text-align: center;
+	clear: both;
+	    width: 750px;
+}
+div.digg a {
+	border-right: #aaaadd 1px solid;
+	padding-right: 5px;
+	border-top: #aaaadd 1px solid;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin: 2px;
+	border-left: #aaaadd 1px solid;
+	color: #000099;
+	padding-top: 2px;
+	border-bottom: #aaaadd 1px solid;
+	text-decoration: none
+}
+div.digg a:hover {
+	border-right: #000099 1px solid;
+	border-top: #000099 1px solid;
+	border-left: #000099 1px solid;
+	color: #000;
+	border-bottom: #000099 1px solid
+}
+div.digg a:active {
+	border-right: #000099 1px solid;
+	border-top: #000099 1px solid;
+	border-left: #000099 1px solid;
+	color: #000;
+	border-bottom: #000099 1px solid
+}
+div.digg span.current {
+	border-right: #000099 1px solid;
+	padding-right: 5px;
+	border-top: #000099 1px solid;
+	padding-left: 5px;
+	font-weight: bold;
+	padding-bottom: 2px;
+	margin: 2px;
+	border-left: #000099 1px solid;
+	color: #fff;
+	padding-top: 2px;
+	border-bottom: #000099 1px solid;
+	background-color: #000099
+}
+div.digg span.disabled {
+	border-right: #eee 1px solid;
+	padding-right: 5px;
+	border-top: #eee 1px solid;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin: 2px;
+	border-left: #eee 1px solid;
+	color: #ddd;
+	padding-top: 2px;
+	border-bottom: #eee 1px solid
+}
+</style>
+</head>
+
+<body>
+<div id="header">
+	<div id="neirongqu">
+		<div id="logo">LOGO</div>
+		<div id="denglu">
+			<a>注册登录</a>
+		</div>
+		<div id="daohang">
+			<a>首页</a>
+			<a>购买产品</a>
+			<a>新闻动态</a>
+			<a>帮助中心</a>
+			<a>推广赚钱</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="banner flexslider">
+  <ul class="slides">
+    <li><a><img src="images/331.jpg"/></a></li>
+  </ul>
+</div>
+
+
+<div id="cplist">
+	<div id="neirongqu" style=" padding-bottom: 50px;">
+		<div id="dabiaot">中心</div>
+		<div id="liebiaobiaoti">
+			<a><span id="biaotit">标题</span><span id="shijiann">2018-02-02</span></a>
+			<a><span id="biaotit">标题</span><span id="shijiann">2018-02-02</span></a>
+			<a><span id="biaotit">标题</span><span id="shijiann">2018-02-02</span></a>
+			<a><span id="biaotit">标题</span><span id="shijiann">2018-02-02</span></a>
+			<a><span id="biaotit">标题</span><span id="shijiann">2018-02-02</span></a>
+			<a><span id="biaotit">标题</span><span id="shijiann">2018-02-02</span></a>
+		</div>
+		<div id="liebiaogonggao">
+			<span id="zixun">在线咨询</span>
+			<span id="zixunl">在线时间：11：00-22：00</span>
+			<span id="zixunl">QQ客服：<a>465456465</a></span>
+			<span id="zixunl">客服电话：46545-56465654</span>
+		</div>
+		<div class="digg"> <span class="disabled"> < </span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a><a href="#?page=6">6</a><a href="#?page=7">7</a>...<a href="#?page=199">199</a><a href="#?page=200">200</a><a href="#?page=2"> > </a></div>
+	</div>
+</div>
+
+<div id="footer">
+	<div id="neirongqu">
+		<div id="dizhi">地址：xx市xx区xx路xx号</div>
+ 		<div id="beian">Copyright © 2018.  All rights reserved. 京ICP备xxxxxxx号</div>
+	</div>
+</div>
+</body>
+</html>

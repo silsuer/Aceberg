@@ -1,0 +1,19 @@
+{
+  "name" : "MenuManager",
+  "namespace":"Ace\\plugins\\a\\MenuManager\\MenuManager",
+  "type":"plugin",
+  "author":"silsuer",
+  "description": "菜单管理插件",
+  "require":{
+    "models":[                          ],
+    "plugins":[],
+    "components":{
+      "a/add_menu":"1.0",
+      "a/delete_menu":"1.0",
+      "a/modify_menu":"1.0",
+      "a/get_menus":"1.0"
+    },
+    "tags":[]
+  },
+  "version":"1.0"
+}

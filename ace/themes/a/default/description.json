@@ -1,11 +1,12 @@
 {
   "name" : "default",
+  "type":"theme",
   "description": "默认的主题",
   "require":{
-    "models":[],
+    "models":[                          ],
     "plugins":[],
     "components":[],
     "tags":[]
   },
-  "version":"v1.0"
+  "version":"1.0"
 }

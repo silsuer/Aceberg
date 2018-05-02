@@ -1,0 +1,6 @@
+{
+  "name": "getModulesList",
+  "namespace": "Ace\\tags\\a\\getModulesList\\getModulesList",
+  "description": "用于获取模型列表",
+  "version": "1.0"
+}

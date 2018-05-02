@@ -8,22 +8,23 @@
 
 
 // 设置redis，2个参数设置,均用同一个数据库
-function R(){
-    $redis= \S\Redis::getInstance();  // 获取单例
+function R()
+{
+    $redis = \S\Redis::getInstance();  // 获取单例
     $args = func_get_args();
-    switch (func_num_args()){
+    switch (func_num_args()) {
         case 1:
-           if(is_array($args[0])){  // 传入一个数组，批量赋值
-               foreach ($args[0] as $k => $v){
-                   $redis->set($k,$v);
-               }
-               return true;
-           }
-           $v = $redis->get($args[0]);  // 取出
-           return $v;
+            if (is_array($args[0])) {  // 传入一个数组，批量赋值
+                foreach ($args[0] as $k => $v) {
+                    $redis->set($k, $v);
+                }
+                return true;
+            }
+            $v = $redis->get($args[0]);  // 取出
+            return $v;
             break;
         case 2:
-            $redis->set($args[0],$args[1]);  // 设置
+            $redis->set($args[0], $args[1]);  // 设置
             return true;
             break;
         default:
@@ -33,25 +34,28 @@ function R(){
 
 
 // 创建一个路由并返回
-function routeInit(){
+function routeInit()
+{
     return new \S\Route();
 }
 
 
 // 把如果是
-function allToString($arg){
-    if (is_string($arg)||is_int($arg)) return $arg;
-    if(is_object($arg)||is_array($arg)) $arg = allToArray($arg);
+function allToString($arg)
+{
+    if (is_string($arg) || is_int($arg)) return $arg;
+    if (is_object($arg) || is_array($arg)) $arg = allToArray($arg);
     return json_encode($arg);
 }
 
 // 把所有都转换为数组
-function allToArray($arg){
-    if(is_object($arg)){
-        $arg = json_decode(json_encode($arg),true);
+function allToArray($arg)
+{
+    if (is_object($arg)) {
+        $arg = json_decode(json_encode($arg), true);
     }
-    foreach ($arg as  $v){
-        if(is_object($v)){
+    foreach ($arg as $v) {
+        if (is_object($v)) {
             allToArray($v);
         }
     }
@@ -66,7 +70,8 @@ function allToArray($arg){
    只需要把读过的配置信息存入一个静态数组中即可
  */
 // 两个参数是设置 ，一个参数是读取
-function C(){
+function C()
+{
     $conf = \S\Config::getInstance();
     $args = func_get_args();
     switch (func_num_args()) {
@@ -74,14 +79,14 @@ function C(){
             return $conf->getAll();
             break;
         case 1:   //一个参数，则为读取配置信息的值,如果是数组，为动态设置配置信息的值
-            if (is_array($args[0])){
+            if (is_array($args[0])) {
                 return $conf->setAll($args[0]);
             }
             return $conf->get($args[0]);
             break;
         case 2:   //两个参数，为设置配置信息的值
             //echo "2个参数";
-            return $conf->set($args[0],$args[1]);
+            return $conf->set($args[0], $args[1]);
             break;
         default:
             break;
@@ -90,38 +95,42 @@ function C(){
 
 
 // 设置session
-function session(swoole_http_request $request,$parm1,$parm2 = null){
+function session(swoole_http_request $request, $parm1, $parm2 = null)
+{
     // 两个参数是读取，三个参数是设置，第一个传入request
-    if(is_null($parm2)){  // 读取
-        return \S\Session::getValue($request,$parm1);
-    }else{
+    if (is_null($parm2)) {  // 读取
+        return \S\Session::getValue($request, $parm1);
+    } else {
         // 设置
-        return \S\Session::setValue($request,$parm1,$parm2);
+        return \S\Session::setValue($request, $parm1, $parm2);
     }
 }
 
 
 // 获取Template的单例
-function temp(){
-   return \S\Template::getInstance();
+function temp()
+{
+    return \S\Template::getInstance();
 }
 
 // 项目根目录
-function root_path(){
-    return  dirname(dirname(dirname(__FILE__)));
+function root_path()
+{
+    return dirname(dirname(dirname(__FILE__)));
 }
 
 // 操作redis，第一个是数据库编号
-function RD(){
+function RD()
+{
     $args = func_get_args();  // 获取参数
     $redis = new \S\Redis($args[0]); // 获取redis实例（非单例）
-    switch (count($args)){
+    switch (count($args)) {
         case 2:
             // 获取或者批量设置
-            if(is_array($args[1])){
+            if (is_array($args[1])) {
                 // 批量设置
-                foreach ($args[1] as $k => $v){
-                    $redis->set($k,$v);
+                foreach ($args[1] as $k => $v) {
+                    $redis->set($k, $v);
                 }
             }
             // 获取
@@ -129,11 +138,11 @@ function RD(){
             break;
         case 3:
             // 单独设置
-            $redis->set($args[1],$args[2]);
+            $redis->set($args[1], $args[2]);
             break;
         case 4:
             // 第四个参数是 删除
-            if($args[3]=='delete'){
+            if ($args[3] == 'delete') {
                 $redis->delete($args[1]);  // 传入的第二个参数会被销毁，第三个参数任意
             }
             break;
@@ -141,4 +150,38 @@ function RD(){
             break;
     }
     return true;
+}
+
+
+function resJson($arg=null)
+{
+    $d = [
+        'data' => [],
+        'info' => 'success',
+        'status' => 200
+    ];
+
+    if (is_string($arg)) {
+        $d['info'] = $arg;
+    }
+
+    if (is_array($arg) && count($arg) == 2 && is_string($arg[0]) && is_int($arg[1])) {
+        $d['info'] = $arg[0];
+        $d['status'] = $arg[1];
+    }
+
+    if (is_array($arg) && count($arg) == 3 && is_array($arg[0]) && is_string($arg[1]) && is_int($arg[2])) {
+        $d['data'] = $arg[0];
+        $d['info'] = $arg[1];
+        $d['status'] = $arg[2];
+    }
+
+    if (is_object($arg)) {
+        $d['data'] = allToArray($arg);
+    }
+    return json_encode($d);
+}
+
+function ace_path(){
+    return root_path(). '/ace';
 }

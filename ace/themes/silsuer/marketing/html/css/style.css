@@ -1,0 +1,350 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, object, iframe,h1, h2, 
+h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, 
+em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, 
+ol, ul, li,fieldset, form, label, legend,table, caption, tbody, 
+tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption, 
+figure, footer, header, hgroup, menu, nav, section, summary,time, mark, 
+audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    outline-style:none;/*FF*/ 
+	list-style: none;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	min-width: 1200px;
+}
+body {
+    line-height:1;
+}
+ 
+a{
+	cursor: pointer;
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+#header{
+	width: 100%;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EDEDED;
+}
+#cplist{
+	width: 100%;
+	padding-bottom: 5px;
+}
+#about{
+	width: 100%;
+	padding-bottom: 5px;
+}
+#neirongqu{
+	margin: auto;
+	width: 1200px;
+	overflow: hidden;
+	min-width: 1200px;
+	font-size: 18px;
+	font-family: "微软雅黑";
+}
+#logo{
+	float: left;
+	width: 280px;
+	margin-top: 50px;
+	background: #000000;
+	height: 70px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 70px;
+}
+#daohang{
+	float: right;
+	margin-top: 65px;
+}
+#daohang a{
+	width: 120px;
+	display: block;
+	float: left;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 20px;
+}
+#daohang a:hover{ background-color: #004e99; color: #FFFFFF; border-radius: 5px;}
+#denglu a{
+	width: 120px;
+	display: block;
+	float: right;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 20px;
+	margin-top: 65px;
+}
+#denglu a:hover{ background-color: #FFD600; color: #000000; border-radius: 5px;}
+#sybiaoti{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 26px;
+	font-family: "微软雅黑";
+	border-bottom: 1px solid #000000;
+	line-height: 80px;
+    color: #004e99;
+    font-weight: bold;
+}
+#chanpinrq{
+	width: 100%;
+	min-width: 100%;
+	overflow: hidden;
+}
+#chanpink{
+	width: 220px;
+	margin-left: 9px;
+	margin-right: 9px;
+	height: 238px;
+	float: left;
+	border: 1px solid #C7C7C7;
+	text-align: center;
+	margin-top: 50px;
+}
+#fangda img{
+	width: 200px;
+	height: 190px;
+	transition: all 0.8s;
+}
+#fangda{
+	margin: auto;
+	width: 200px;
+	height: 190px;
+	margin-top: 10px;
+	overflow: hidden;
+	text-align: center;
+}
+#fangda img:hover{ transform: scale(1.5);}
+#chanpink .cpmingzi{
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+#xinwenrq{
+	margin-top: 30px;
+	width: 550px;
+	padding-bottom: 50px;
+	margin-right: 100px;
+	float: left;
+}
+#bangzhurq{
+	margin-top: 30px;
+	width: 550px;
+	padding-bottom: 50px;
+	float: left;
+}
+#guanyubt{
+	font-family: "微软雅黑";
+	font-size: 18px;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #8c8c8c;
+}
+#xinwenbt1{
+	width: 100%;
+	height: 30px;
+	display: block;
+	margin-top: 5px;
+	line-height: 30px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	border-bottom: 1px #CCCCCC dashed;
+	padding: 0 0 2px 0;
+}
+#xinwenbt1:hover{ background-color: #004e99; color: #FFFFFF;}
+#bangzhubt1{
+	width: 100%;
+	height: 30px;
+	display: block;
+	margin-top: 5px;
+	line-height: 30px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	border-bottom: 1px #CCCCCC dashed;
+	padding: 0 0 2px 0;
+}
+#bangzhubt1:hover{ background-color: #004e99; color: #FFFFFF;}
+#timu{
+	float: left;
+}
+#shijian{
+	float: right;
+}
+#footer{
+	width: 100%;
+	padding: 20px 0 20px 0;
+	border-top: 1px solid #d9d9d9;
+}
+#dizhi{
+	margin: auto;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+#beian{
+	margin: auto;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+
+
+
+.flexslider {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+	overflow: hidden;
+}
+.slides {
+	position: relative;
+	z-index: 1;
+	font-size: 0;
+}
+.slides li {
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.slides li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.slides li a img {
+	width: 100%;
+	height: auto;
+}
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 2%;
+	z-index: 2;
+	right: 0;
+	text-align: center;
+}
+.flex-control-nav li {
+	display: inline-block;
+	margin: 0 5px;
+*display:inline;
+	zoom: 1;
+}
+.flex-control-nav a {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 40px;
+    overflow: hidden;
+    background: url(../images/y2.png) no-repeat center center;
+    cursor: pointer;
+}
+.flex-control-nav .flex-active {
+	background: url(../images/y1.png) no-repeat center center;
+}
+.flex-direction-nav {
+	z-index: 3;
+	left: 0;
+	width: 100%;
+	top: 45%;
+}
+.flex-direction-nav li a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	cursor: pointer;
+	position: absolute;
+}
+#bjhui{
+	background: #d9d9d9;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+#dabiaot{
+	line-height: 50px;
+	font-size: 26px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	background-color: #1417e2;
+	color: #FFFFFF;
+	margin-top: 20px;
+	text-indent: 2rem;
+}
+#liebiaobiaoti{
+	width: 750px;
+	float: left;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px #cccccc solid;
+	border-radius: 5px;
+}
+#liebiaobiaoti a{
+	display: block;
+	height: 50px;
+	border-bottom: 1px #cccccc solid;
+}
+#liebiaobiaoti a:hover{ background-color: #004e99; color: #ffffff;}
+#biaotit{
+	line-height: 50px;
+	display: block;
+	float: left;
+	text-indent: 1rem;
+}
+#shijiann{
+	line-height: 50px;
+	display: block;
+	float: right;
+}
+#liebiaogonggao{
+	width: 350px;
+	float: right;
+	margin-top: 20px;
+	border: 1px #cccccc solid;
+}
+#zixun{
+	display: block;
+	line-height: 50px;
+	text-indent: 2rem;
+	font-size: 24px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+}
+#zixunl{
+	display: block;
+	line-height: 50px;
+	text-indent: 2rem;
+	font: 16px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+}
+
+
+
+

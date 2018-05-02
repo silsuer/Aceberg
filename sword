@@ -1,0 +1,49 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use  App\Console\Kernel;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+foreach (Kernel::$commands as $v){
+    $application->add(new $v());
+}
+
+
+//$directories = [getcwd(), getcwd() . DIRECTORY_SEPARATOR . 'S/Common/config'];
+//print_r($directories);
+
+//$params = array(
+//    'dbname' => C('DB_NAME'),
+//    'user' => C('DB_USER_NAME'),
+//    'password' => C('DB_PASSWORD'),
+//    'host' => C('mysql'),
+//    'driver' => 'pdo_mysql',
+//);
+//$db = \Doctrine\DBAL\DriverManager::getConnection($params);
+
+//$heplerSet = new \Symfony\Component\Console\Helper\HelperSet(array(
+//    'db' => new \Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper($db),
+//    'question' => new \Symfony\Component\Console\Helper\QuestionHelper(),
+//));
+
+//$configuration = new \Doctrine\DBAL\Migrations\Configuration\Configuration($db);
+//$configuration->setMigrationsTableName('migrations');
+//$configuration->setMigrationsDirectory('migrations');
+//$configuration->setMigrationsNamespace('Migration');
+
+
+$command = new \Doctrine\DBAL\Migrations\Tools\Console\Command\ExecuteCommand();
+//$command->setMigrationConfiguration($configuration);
+$application->add($command);
+$application->add(new \Doctrine\DBAL\Migrations\Tools\Console\Command\GenerateCommand());
+$application->add(new \Doctrine\DBAL\Migrations\Tools\Console\Command\LatestCommand());
+$application->add(new \Doctrine\DBAL\Migrations\Tools\Console\Command\MigrateCommand());
+$application->add(new \Doctrine\DBAL\Migrations\Tools\Console\Command\StatusCommand());
+$application->add(new \Doctrine\DBAL\Migrations\Tools\Console\Command\VersionCommand());
+
+//$application->setHelperSet($heplerSet);
+$application->run();

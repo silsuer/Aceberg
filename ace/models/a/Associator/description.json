@@ -1,0 +1,22 @@
+{
+  "name":"ArticleContent",
+  "namespace":"Ace\\models\\a\\Associator\\Associator",
+  "type":"model",
+  "logo":"logo.jpg",
+  "description":"会员模型，基于此模型构建后台管理员模块以及会前台会员模块",
+  "depends":{
+    "plugins":{
+
+    },
+    "components":{
+
+    },
+    "tags":{
+
+    },
+    "macro":{
+
+    }
+  },
+  "version":"1.0"
+}

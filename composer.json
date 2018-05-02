@@ -2,12 +2,17 @@
     "require": {
         "twig/twig": "^2.0",
         "predis/predis": "^1.1",
-        "illuminate/database": "^5.6"
+        "illuminate/database": "^5.6",
+        "gregwar/captcha": "^1.1",
+        "symfony/console": "@stable",
+        "owasp/phprbac": "^2.0",
+        "doctrine/migrations": "^1.6"
     },
     "autoload": {
         "files":["S/S-Framework.php"],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Ace\\":"ace/"
         }
     },
     "require-dev": {

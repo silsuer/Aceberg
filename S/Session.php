@@ -31,7 +31,6 @@ class Session
     // 传入一个id，从数组或者redis中取出对象，判断这个对象是否过期，如果过期，返回false，否则返回对象
     public static function getObj($sessionID)
     {
-        echo "键为: $sessionID \n";
         $driver = C('SESSION_DRIVER');  // 获取驱动
         if ($driver == "ARRAY") {
             // 数组形式取得

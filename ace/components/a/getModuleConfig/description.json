@@ -1,0 +1,6 @@
+{
+  "name": "getModuleConfig",
+  "namespace": "Ace\\components\\a\\getModuleConfig\\getModuleConfig",
+  "description": "根据传入的模型id模块id，获取config字段配置",
+  "version": "1.0"
+}

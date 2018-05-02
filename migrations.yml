@@ -1,0 +1,4 @@
+name: AceMigrations
+migrations_namespace: AceMigrations
+table_name: migration_versions
+migrations_directory: S/Common/migrations

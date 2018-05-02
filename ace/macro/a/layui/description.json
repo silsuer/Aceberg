@@ -1,0 +1,20 @@
+{
+  "name":"layui",
+  "type":"macro",
+  "description":"从layui中抽出来的宏，用来构建表单",
+  "depends":{
+    "plugins":{
+
+    },
+    "components":{
+
+    },
+    "tags":{
+
+    },
+    "macro":{
+
+    }
+  },
+  "version":"1.0"
+}

@@ -1,0 +1,22 @@
+{
+  "name":"ArticleContent",
+  "namespace":"Ace\\models\\a\\ArticleContent\\ArticleContent",
+  "type":"model",
+  "logo":"logo.jpg",
+  "description":"文章内容模型，生成文章等数据，对文章的增删改查",
+  "depends":{
+    "plugins":{
+
+    },
+    "components":{
+
+    },
+    "tags":{
+
+    },
+    "macro":{
+
+    }
+  },
+  "version":"1.0"
+}

@@ -1,0 +1,9 @@
+{# 依次传入 名称，input框中的name，默认值，提示信息，id，类型，长度 #}
+{% macro input(name,real_name, value,placeholder ,id,type) %}
+<div class="layui-form-item">
+    <label class="layui-form-label">{{name}}</label>
+    <div class="layui-input-block">
+        <input type="{{ type|default('text') }}" id="{{id|default(real_name)}}" name="{{real_name}}" value="{{value|default('')}}" autocomplete="off" placeholder="{{placeholder|default('')}}" class="layui-input">
+    </div>
+</div>
+{% endmacro %}

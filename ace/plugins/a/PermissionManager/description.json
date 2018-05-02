@@ -1,0 +1,14 @@
+{
+  "name" : "PermissionManager",
+  "type":"plugin",
+  "author":"silsuer",
+  "namespace":"Ace\\plugins\\a\\PermissionManager\\PermissionManager",
+  "description": "权限管理插件",
+  "require":{
+    "models":[                          ],
+    "plugins":[],
+    "components":{},
+    "tags":[]
+  },
+  "version":"1.0"
+}

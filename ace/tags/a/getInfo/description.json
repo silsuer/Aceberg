@@ -1,0 +1,7 @@
+{
+  "name":"getInfo",
+  "type":"tag",
+  "namespace":"Ace\\tags\\a\\getInfo\\getInfo",
+  "description":"自定义标签，用来根据参数获取一些指定数据",
+  "version":"1.0"
+}

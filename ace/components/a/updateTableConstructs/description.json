@@ -1,0 +1,6 @@
+{
+  "name": "updateTableConstructs",
+  "namespace": "Ace\\components\\a\\updateTableConstructs\\updateTableConstructs",
+  "description": "更新表结构，主要用于添加模块时根据传来的字段数组更新表结构",
+  "version": "1.0"
+}

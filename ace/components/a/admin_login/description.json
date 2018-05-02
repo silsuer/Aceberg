@@ -1,0 +1,6 @@
+{
+  "name":"admin_login",
+  "namespace":"Ace\\components\\a\\admin_login\\admin_login",
+  "description":"后台登陆组件，用于后台登陆，post方式请求",
+  "version":"1.0"
+}

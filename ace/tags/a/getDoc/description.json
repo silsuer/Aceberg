@@ -1,0 +1,7 @@
+{
+  "name":"getDoc",
+  "type":"tag",
+  "namespace":"Ace\\tags\\a\\getDoc\\getDoc",
+  "description":"生成文档标签，用于在/doc.html中获取当前项目所有文档信息",
+  "version":"1.0"
+}

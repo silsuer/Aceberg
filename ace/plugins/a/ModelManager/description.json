@@ -1,0 +1,16 @@
+{
+  "name" : "ModelManager",
+  "type":"plugin",
+  "author":"silsuer",
+  "namespace":"Ace\\plugins\\a\\ModelManager\\ModelManager",
+  "description": "模型管理插件",
+  "require":{
+    "models":[                          ],
+    "plugins":[],
+    "components":{},
+    "tags":{
+      "a/getModelsList":"1.0"
+    }
+  },
+  "version":"1.0"
+}

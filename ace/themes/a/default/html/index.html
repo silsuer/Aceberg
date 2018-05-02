@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="{{golbal.public_path}}/layer.js"></script>
+    <script src="{{golbal.currnet_path}}/layer.js"></script>
+
 </head>
 <body>
 <h1>Hello,World!</h1>
+{{arclist  module_id='4' row='10'}}
+   <li>{{arc:name}}</li>
+{{/arclist}}
 {{the}}  == {{go}}
+
+{{import macro_a_aaa as Form}}
+<form action="">
+    {{Form.input}}
+</form>
 </body>
 </html>
+

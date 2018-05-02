@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>个人注册</title> 
+  <style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			a {
+				text-decoration: none;
+			}
+			html {
+				height: 100%;
+			}
+			body, html {
+				height: 100%;
+				font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+				background: url(images/reg_bg4.jpg) no-repeat;
+				background-size: 100% 100%;
+				background-attachment: fixed;
+			}
+			img {
+				display: block;
+				border: 0;
+			}
+			.top {
+				float: left;
+				width: 100%;
+				height: 82px;
+				padding-left: 70px;
+				padding-right: 20px;
+				margin-top: 30px;
+			}
+			.logo {
+				float: left;
+			}
+			.tle {
+				float: left;
+				width: auto;
+				height: 30px;
+				line-height: 30px;
+				margin-top: 26px;
+				padding-left: 30px;
+				font-size: 18px;
+				border-left: 1px solid #525252;
+				color: #525252;
+				margin-left: 30px;
+			}
+			.t-right {
+				float: right;
+				width: auto;
+				height: 40px;
+				line-height: 40px;
+				    margin-top: 280px;
+    margin-right: 100px;
+				display: box;
+				display: flex;
+				display: -webkit-flex;
+				align-items: center;
+				-webkit-align-items: center;
+				justify-content: center;
+				-webkit-justify-content: center;
+				display: -webkit-box;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				color: #525252;
+			}
+			.t-right  a {
+				width: 120px;
+				height: 40px;
+				color: #525252;
+				display: box;
+				display: flex;
+				display: -webkit-flex;
+				align-items: center;
+				-webkit-align-items: center;
+				justify-content: center;
+				-webkit-justify-content: center;
+				display: -webkit-box;
+				-webkit-box-pack: center;
+				border-radius: 3px;
+				border: 1px solid #525252;
+				-webkit-box-align: center;
+				font-family: sans-serif;
+			}
+			.t-right  a:hover {
+				background: #F9F9F9;
+			}
+			.container {
+				width: 980px;
+				height: 652px;
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				margin-left: -490px;
+				margin-top: -326px;
+				background: #FFFFFF;
+				box-shadow: 0 0 30px #767676;
+				padding: 0 0 30px;
+				border-radius: 3px;
+			}
+			.container:after {
+				width: 100%;
+				height: auto;
+				text-align: center;
+				position: absolute;
+				left: 0;
+				bottom: -50px;
+				content: "ICP证：鲁B1-20110004-4(山东附近科技有限公司) [2012]0671-031号";
+				color: #828282;
+			}
+			.regBox {
+				float: left;
+				width: 550px;
+				height: 540px;
+				padding: 0 70px;
+				border-right: 1px solid #DDDDDD;
+			}
+			.form_box {
+				width: 100%;
+				height: 54px;
+				border: 1px solid #DDDDDD;
+				background: rgba(255,255,255,0.4);
+				border-radius: 3px;
+				margin-bottom: 32px;
+				position: relative;
+				cursor: text;
+			}
+			.form_box label {
+				float: left;
+				width: 130px;
+				height: 100%;
+				text-align: center;
+				line-height: 52px;
+				padding: 0 20px;
+			}
+			.form_box input[type=text], input[type=password] {
+				float: left;
+				width: 160px;
+				height: 100%;
+				outline: none;
+				border: 0;
+				font-size: 15px;
+			}
+			.form_agree {
+				width: 100%;
+				height: 54px;
+				font-size: 13px;
+			}
+			.form_agree input[type=checkbox] {
+				width: 18px;
+				height: 18px;
+				vertical-align: bottom;
+				margin-right: 10px;
+			}
+			#reg-btn {
+				width: 100%;
+				height: 100%;
+				background: #04b4fd;
+				border: 0;
+				color: #FFFFFF;
+				border-radius: 3px;
+				cursor: pointer;
+				font-size: 16px;
+				outline: 0;
+			}
+			#reg-btn:hover {
+				background: #01a7ec;
+			}
+			#reg-btn:active {
+				background: #04b4fd;
+			}
+			.cooperation {
+				float: left;
+				width: 430px;
+				height: 540px;
+				position: relative;
+			}
+			.rm {
+				margin-top: 211px;
+				text-align: center;
+				font-size: 18px;
+			}
+			
+			.rm img {
+				margin: 30px auto 0;
+			}
+			.yzCode {
+				position: absolute;
+				right: 3px;
+				top: 3px;
+				width: 110px;
+				height: 46px;
+				cursor: pointer;
+			}
+			.warn {
+				position: absolute;
+				left: 0;
+				bottom: -33px;
+				width: 100%;
+				height: 32px;
+				line-height: 32px;
+				color: #D4D4D4;
+				font-size: 12px;
+				font-family: "Microsoft YaHei","Hiragino Sans GB";
+				display: none;
+			}
+			.sin {
+				display: -webkit-box;
+				display: flex;
+				align-items: center;
+				-webkit-align-items: center;
+				-webkit-box-align: center;
+			}
+			.warn span {
+				width: 32px;
+				height: 32px;
+				display: block;
+				background: url(images/warn_error.png) no-repeat;
+				background-position: 0;
+				transform: scale(0.7);
+				-ms-transform: scale(0.7);
+				-moz-transform: scale(0.7);
+				-webkit-transform: scale(0.7);
+				-o-transform: scale(0.7);
+			}
+			.warn .error {
+				background-position: -33px;
+			}
+		</style> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <div class="top"> 
+    <a href="index.html"><img class="logo" src="images/logo_wrz2.png"></a> 
+    <div class="tle">
+     欢 迎 注 册
+    </div> 
+    <div class="t-right">
+      已有帐号？，请&nbsp;&nbsp; 
+     <a href="login.html" class="login-btn"><img src="images/reg_login.png" width="20" height="20">&nbsp;登录</a> 
+    </div> 
+   </div> 
+   <div class="regBox"> 
+    <div class="form_box"> 
+     <label>手&nbsp;机&nbsp;号&nbsp;码</label>
+     <input type="text" id="phone" placeholder="您的手机号码" maxlength="11"> 
+     <div class="warn"> 
+      <span></span>仅支持11位数的手机号码，注册后无法修改 
+     </div> 
+    </div> 
+    <div class="form_box"> 
+     <label>设&nbsp;置&nbsp;密&nbsp;码</label>
+     <input type="password" id="pwd" placeholder="不低于6位数" maxlength="12"> 
+     <div class="warn"> 
+      <span></span>建议使用字母、数字和符号两种及以上的组合，6-12个字符 
+     </div> 
+    </div> 
+    <div class="form_box"> 
+     <label>确&nbsp;认&nbsp;密&nbsp;码</label>
+     <input type="password" id="pwd-t" placeholder="请再次输入密码" maxlength="12"> 
+     <div class="warn"> 
+      <span></span>请再次输入密码 
+     </div> 
+    </div> 
+    <div class="form_box"> 
+     <label>联&nbsp;系 &nbsp; Q &nbsp;Q</label>
+     <input type="text" id="qq" placeholder="您常用的QQ号码" maxlength="12"> 
+     <div class="warn"> 
+      <span></span>请填写您常使用的QQ号码，注册后无法修改 
+     </div> 
+    </div> 
+    <div class="form_agree"> 
+     <input type="checkbox" checked>我已阅读并同意 
+     <a href="#">《万人赚服务协议》</a> 
+    </div> 
+    <div class="form_box" style="margin: 0; border: 0;"> 
+     <button id="reg-btn" type="submit">立 即 注 册</button> 
+    </div> 
+   </div> 
+<!--
+   <div class="cooperation"> 
+    <div class="rm"> 
+     <p>第三方账号一键登录</p> 
+     <a href="wxlogin.aspx"><img src="images/wx_logo.png"></a> 
+    </div> 
+   </div> 
+-->
+  </div> 
+  <script src="js/jquery-1.9.min.js"></script> 
+  <script>
+			var isMobile=/^(?:13\d|15\d|18\d|17\d|14\d)\d{5}(\d{3}|\*{3})$/;
+			$('.yzCode').attr('src', './ashxn/member.ashx?type=vcode&' + (new Date().getTime().toString()));
+
+			$('.form_box').click(function(){
+				$(this).children('input').focus();
+			})
+			//获取焦点
+			$('.form_box input[type=text], input[type=password]').keyup(function(event){
+				if($(this).val() != ''){
+					$(this).siblings('.warn').addClass('sin');
+				}else{
+					$(this).siblings('.warn').removeClass('sin');
+				}
+				isVer($(this).siblings('label').text().substring(0, 1), $(this), true);
+			})
+			
+			//失去焦点
+			$('.form_box input[type=text], input[type=password]').focusout(function(){
+				$(this).siblings('.warn').removeClass('sin');
+				isVer($(this).siblings('label').text().substring(0, 1), $(this), false);	
+			})
+			
+			$('.yzCode').click(function(){
+				$('this').attr('src', './ashxn/member.ashx?type=vcode&' + (new Date().getTime().toString()));
+			});
+			
+			$('#reg-btn').click(function(){
+				if($('#phone').val() == ''){
+					$('#phone').parent('.form_box').css('border-color', '#e22');
+					$('#phone').siblings('.warn').html('<span class="error"></span>请填写您的手机号码').css('color', '#e22').addClass('sin');
+					return ;
+				}
+				if(!isMobile.test($('#phone').val())){
+					$('#phone').parent('.form_box').css('border-color', '#e22');
+					$('#phone').siblings('.warn').html('<span class="error"></span>手机号码格式错误').css('color', '#e22').addClass('sin');
+					return ;
+				}
+				if($('#pwd').val() == ''){
+					$('#pwd').parent('.form_box').css('border-color', '#e22');
+					$('#pwd').siblings('.warn').html('<span class="error"></span>请输入您要设置的密码').css('color', '#e22').addClass('sin');
+					return ;
+				}
+				if($('#pwd').val().length < 6 || $('#pwd').val().length > 12){
+					$('#pwd').parent('.form_box').css('border-color', '#e22');
+					$('#pwd').siblings('.warn').html('<span class="error"></span>请输入6-12个字符密码').css('color', '#e22').addClass('sin');
+					return ;
+				}
+				if($('#pwd-t').val() != $('#pwd').val()){
+					$('#pwd-t').parent('.form_box').css('border-color', '#e22');
+					$('#pwd-t').siblings('.warn').html('<span class="error"></span>两次密码输入不一致').css('color', '#e22').addClass('sin');
+					return ;
+				}
+				
+				 $.post('./ashxn/member.ashx', 'type=reg&name=' + $('#phone').val() + '&pwd=' + $('#pwd').val() + '&qq=' + $('#qq').val() + '&vcode=' + $('#keyCode').val(), function (v) {
+		            if (v[0].code != '1') $('#yzCode').click();
+		            if (tips(v[0].code, '注册不成功！')) {
+		                var rurl = getQueryString('rurl');
+		                if (rurl != null)
+		                    location.href = rurl;
+		                else {
+		                    $.post('./ashx/pay.ashx', 'get=info', function () {
+		                        location.href = './ucenter_wrz.aspx';
+		                    });
+		                }
+		            } else { 
+		            	$('#yzCode').click(); $('#keyCode').val(''); 
+		            }
+		        },'json');
+			});
+			
+			function tips(v, v1) {
+		        if (v == '1') return true;
+		        if (v == '0') alert(v1);
+		        if (v == '2') alert('手机号不能为空！');
+		        if (v == '3') alert('密码不正确！');
+		        if (v == '6') alert('手机号已经被注册过！');
+		        if (v == '7') alert('验证码不正确！');
+			if (v == '-1') alert('手机号已经被注册过！');
+		        return false;
+		    }
+
+			function isVer(d, dom, tf){
+				switch(d){
+					case '手':
+						if(tf) {
+							dom.parent('.form_box').css('border-color', '#DDDDDD');
+							dom.siblings('.warn').html('<span></span>仅支持11位数的手机号码，注册后无法修改').css('color', '#D4D4D4').addClass('sin');
+						} else {
+							if(dom.val() == ''){
+								dom.parent('.form_box').css('border-color', '#DDDDDD');
+								dom.siblings('.warn').html('<span></span>仅支持11位数的手机号码，注册后无法修改').css('color', '#D4D4D4').removeClass('sin');
+							} else {
+								if(!isMobile.test(dom.val())){
+									dom.parent('.form_box').css('border-color', '#e22');
+									dom.siblings('.warn').html('<span class="error"></span>手机号码格式错误').css('color', '#e22').addClass('sin');
+								}
+							}
+						}	
+						break;
+					case '设':
+							dom.parent('.form_box').css('border-color', '#DDDDDD');
+							dom.siblings('.warn').html('<span></span>建议使用字母、数字和符号两种及以上的组合，6-12个字符').css('color', '#D4D4D4').removeClass('sin');
+						break;
+					case '确':
+						if(tf) {
+							if($(this).val == ''){
+								dom.parent('.form_box').css('border-color', '#DDDDDD');
+								dom.siblings('.warn').html('<span></span>请再次输入密码').css('color', '#D4D4D4').addClass('sin');
+							}
+						} else {
+							if($('#pwd-t').val() != ''){
+								if($('#pwd-t').val() != $('#pwd').val()){
+									dom.parent('.form_box').css('border-color', '#e22');
+									dom.siblings('.warn').html('<span class="error"></span>两次密码输入不一致').css('color', '#e22').addClass('sin');
+								}else{
+									dom.parent('.form_box').css('border-color', '#DDDDDD');
+									dom.siblings('.warn').html('<span></span>请再次输入密码').css('color', '#D4D4D4');
+								}
+							} else {
+								dom.parent('.form_box').css('border-color', '#DDDDDD');
+								dom.siblings('.warn').html('<span></span>请再次输入密码').css('color', '#D4D4D4');
+							}
+						}
+						break;
+				}
+			}
+			
+			function getQueryString(o) {
+		        var reg = new RegExp("(^|&)" + o + "=([^&]*)(&|$)", "i");
+		        var r = window.location.search.substr(1).match(reg);
+		        if (r != null) return unescape(r[2]); return null;
+		   }
+		</script>   
+ </body>
+</html>

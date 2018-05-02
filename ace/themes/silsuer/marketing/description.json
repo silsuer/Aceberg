@@ -1,0 +1,12 @@
+{
+  "name" : "marketing",
+  "type":"theme",
+  "description": "营销系统主题，一级营销系统",
+  "require":{
+    "models":[                          ],
+    "plugins":[],
+    "components":[],
+    "tags":[]
+  },
+  "version":"1.0"
+}

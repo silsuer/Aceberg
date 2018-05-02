@@ -1,0 +1,6 @@
+{
+  "name": "getModelsList",
+  "namespace": "Ace\\tags\\a\\getModelsList\\getModelsList",
+  "description": "用于模型插件，获取本地、云端、已安装模型列表",
+  "version": "1.0"
+}
