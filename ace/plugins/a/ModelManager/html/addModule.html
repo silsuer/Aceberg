@@ -251,15 +251,11 @@
                 var $tr = $(e.target);
 
                 if ($tr.is('.moveUp')) {
-                    layer.msg('上移了');
 
                     if (!$tr.is('tr')) {
                         $tr = $tr.parents('tr');
                     }
-
                     var $prev = $tr.prev();
-                    console.log($prev);
-
                     if ($prev.length == 0) {
                         layer.msg('已经是第一行了！');
                         return false;
@@ -268,15 +264,14 @@
                     $tr.remove();
                     $(html).insertBefore($prev);
 
+                    layer.msg('上移了');
                 } else if ($tr.is('.moveDown')) {
-                    layer.msg('下移了');
-
+                    
                     if (!$tr.is('tr')) {
                         $tr = $tr.parents('tr');
                     }
 
                     var $next = $tr.next();
-                    console.log($next);
                     if ($next.length == 0) {
                         layer.msg('已经是最后一行了！');
                         return false;
@@ -285,6 +280,7 @@
                     $tr.remove();
                     $(html).insertAfter($next);
 
+                    layer.msg('下移了');
                 }
 
 
