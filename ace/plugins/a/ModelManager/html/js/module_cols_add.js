@@ -294,7 +294,7 @@ layui.use(['layer', 'form'], function () {
                                             <div class="layui-form-item">
                                             <label class="layui-form-label">命名规则</label>
                                             <div class="layui-input-inline">
-                                                <select id="type" id="name_rule" name="interest" lay-verify="required" lay-filter="filterType">
+                                                <select id="type" id="name_rule" name="interest" lay-verify="required">
                                                     <option value="">请下拉选择</option>
                                                     <option value="file_name">原文件名</option>
                                                     <option value="timestamp">时间戳</option>
