@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="{{data_path}}/layui/css/layui.css" media="all">
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+    <script src="{{data_path}}/layui/layui.js" charset="utf-8"></script>
+
+    <!-- markdown编辑器依赖jquery -->
+    <script src="{{data_path}}/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+
+    <!-- ueditor编辑器 -->
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="{{data_path}}/neditor/neditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="{{data_path}}/neditor/neditor.all.js"></script>
+    <!-- 中文语言包   -->
+    <script type="text/javascript" charset="utf-8" src="{{data_path}}/neditor/i18n/zh-cn/zh-cn.js"></script>
+
+    <link rel="stylesheet" href="editor/css/editormd.min.css">
+
+    <script src="editor/editormd.min.js" type="text/javascript"></script>
+</head>
+<body>
+{# 拿到模块信息，根据字段信息，拼出字段 #}
+{% set info = ace.tag('a_getModuleInfo','view',{'request':request}) %}
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>{{info.name}}  <small>新建文档</small> </legend>
+</fieldset>
+
+<form id="form_control" class="layui-form" action="" style="margin-top: 20px">
+    {# 遍历字段，渲染页面 #}
+    {% for n in info.config %}
+    {% set type = ace.explode( '->',n.view ) %}
+    {% if type[0]== 'input' %}
+    <div class="layui-form-item">
+        <label class="layui-form-label">{{n.name}}</label>
+        <div class="layui-input-block">
+            <input id="{{n.dir}}" type="text" name="{{n.dir}}"  autocomplete="off" placeholder="{{n.comment}}" class="layui-input">
+        </div>
+    </div>
+    {% endif %}
+
+    {% if type[0]== 'password' %}
+    <div class="layui-form-item">
+        <label class="layui-form-label">{{n.name}}</label>
+        <div class="layui-input-block">
+            <input id="{{n.dir}}" type="password" name="{{n.dir}}"  autocomplete="off" placeholder="{{n.comment}}" class="layui-input">
+        </div>
+    </div>
+    {% endif %}
+
+    {% if type[0]== 'radio' %}
+    <div class="layui-form-item">
+        <label class="layui-form-label">{{n.name}}:</label>
+        <div class="layui-input-block">
+            {% set t = ace.explode('|',type[1]) %}
+            {% for ops in t %}
+            <input type="radio" name="{{n.dir}}" value="{{ops}}" title="{{ops}}" {% if ops==n.default %} checked {% endif %} >
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if type[0]== 'select' %}
+    {% set t = ace.explode('|',type[1]) %}
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">{{n.name}}</label>
+        <div class="layui-input-block">
+            <select id="type" name="{{n.dir}}"  lay-filter="filterType">
+                <option value="">请选择</option>
+                {% for ops in t %}
+                <option value="{{ops}}">{{ops}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if type[0]== 'checkbox' %}
+    <div class="layui-form-item">
+        <label class="layui-form-label">{{n.name}}</label>
+        <div class="layui-input-block">
+            {% set t=ace.explode('|',type[1]) %}
+            {% set default = ace.explode('|',n.default) %}
+            {% for ops in t %}
+            <input type="checkbox" name="{{n.name}}" value="{{ops}}" title="{{ops}}" {% if ace.in_array(ops,default) %} checked {% endif %} >
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if type[0]== 'timer' %}
+    <div class="layui-form-item">
+        <label class="layui-form-label">{{n.name}}</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="{{n.dir}}" id="{{n.dir}}">
+        </div>
+    </div>
+    <script>
+        layui.use('laydate',function () {
+            var laydate = layui.laydate;
+            laydate.render({
+                elem:'#{{n.dir}}',
+                type:'datetime'
+            })
+        })
+    </script>
+    {% endif %}
+
+
+    {% if type[0]== 'markdown' %}
+    <div class="layui-form-item">
+        <label class="layui-form-label">{{n.name}}</label>
+        <div class="layui-input-block">
+            <div id="{{n.dir}}"></div>
+        </div>
+    </div>
+    <script>
+        var editor_{{n.dir}} = editormd("{{n.dir}}", {
+            height: 300,
+            saveHTMLToTextarea : true,
+            path : "{{data_path}}/editor/lib/"
+        });
+    </script>
+
+    {% endif %}
+
+    {% endfor %}
+
+
+
+
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="formSubmit">确认添加</button>
+            <button type="button" class="layui-btn layui-btn-danger" onclick="cancelIframe()">取消</button>
+        </div>
+    </div>
+
+
+</form>
+
+
+
+
+<!-- ueditor编辑器 -->
+
+
+<script>
+
+    layui.use(['form'],function () {
+        var form = layui.form;
+
+
+        //监听提交
+        form.on('submit(formSubmit)', function (data) {
+            var d = data.field; // 获取数据
+            // 获取表格数据
+            console.log(d);
+            // layer.alert(JSON.stringify(d), {
+            //     title: '最终的提交信息'
+            // });
+            layer.confirm("确认添加？", {
+                icon: 6
+            }, function (index) {
+                $.post("{{ace.makeUrl('a_addArticleContent','handle',{'module_id':info.id})}}", {
+                    "data": d
+                }, function (d) {
+                    d = JSON.parse(d);
+                    if (d.status == 200) {
+                        layer.msg("添加成功！！", {
+                            icon: 6
+                        }, function () {
+                           cancelIframe();  // 关掉这个页面
+                        })
+                    }
+                })
+            })
+            return false;
+        });
+    });
+
+    function cancelIframe() {
+        var name = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(name);
+    }
+</script>
+
+</body>
+
+</html>

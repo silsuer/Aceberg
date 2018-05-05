@@ -57,10 +57,17 @@ class Template
         $commonLoader = new \Twig_Loader_Filesystem(root_path() . '/ace');
         $this->commonEnv = new \Twig_Environment($commonLoader, $config);
         $this->commonEnv->addGlobal('ace', new GlobalObj());
+
         // 向环境中添加扩展
+
+        // 调试模式，添加调试扩展
+        if(C('TWIG_DEBUG')){
+          $this->commonEnv->addExtension(new \Twig_Extension_Debug());
+        }
+
     }
 
-    public static function parseUrl($request, $response)
+    public static function parseUrl(\swoole_http_request $request,\swoole_http_response $response)
     {
         // 解析uri看看是否符合 p/m.name.temp 规则，符合按照规则解析，否则去主题中寻找，如果主题中找不到，返回主题404页面
         $arr = explode('.', trim($request->server['request_uri'], '/'));
@@ -248,12 +255,12 @@ class Template
     }
 
     public
-    static function handleComponent($componentName, $handle, $request, $response)
+    static function handleComponent($componentName, $handle = 'handle', $request, $response)
     {
         // 执行组件代码
         if (array_key_exists($componentName, self::$componentsTree) && array_key_exists('namespace', self::$componentsTree[$componentName])) {
             $comp = new self::$componentsTree[$componentName]['namespace']();
-            print_r($comp);
+//            print_r(self::$componentsTree);
             $comp->{$handle}($request, $response);
         }
     }

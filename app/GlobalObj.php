@@ -38,37 +38,61 @@ class GlobalObj
     }
 
     // 根据传入的组件名，生成一个用于访问组件的url   /c.componentName.handle  组件名是类，handle是方法名
-    public function makeUrl($componentName, $handle = 'handle')
+    public function makeUrl($componentName, $handle = 'handle',$arr = [])
     {
         if (array_key_exists($componentName, Template::$componentsTree) && array_key_exists('namespace', Template::$componentsTree[$componentName])) {
             // 存在这个组件
 //            $comp = new Template::$componentsTree[$componentName]['namespace']();
-            return '/c.' . $componentName . '.' . $handle;
+            $params = [];
+            foreach ($arr as $k => $v){
+                $params[] = $k.'='.$v;
+            }
+            // /c.name.handle?a=5&5=6
+            return '/c.' . $componentName . '.' . $handle . '?' . join('&',$params);
         }
     }
 
 
-    public function getContent($dir){
+    public function getContent($dir)
+    {
         $path = root_path() . $dir;
-        if(file_exists($path)){
+        if (file_exists($path)) {
             return file_get_contents($path);
         }
         return "";
     }
 
-    public function getArrayContent($dir){
+    public function getArrayContent($dir)
+    {
         $path = root_path() . $dir;
-        if(file_exists($path)){
-            return json_decode(file_get_contents($path),true);
+        if (file_exists($path)) {
+            return json_decode(file_get_contents($path), true);
         }
         return "";
     }
 
-    public function tag($tagName,$handle = 'view',$arr=null){
-        if(array_key_exists($tagName,Template::$tagsTree)&&array_key_exists('namespace',Template::$tagsTree[$tagName])){
+    public function tag($tagName, $handle = 'view', $arr = null)
+    {
+        if (array_key_exists($tagName, Template::$tagsTree) && array_key_exists('namespace', Template::$tagsTree[$tagName])) {
             // 存在这个标签
             $tag = new Template::$tagsTree[$tagName]['namespace']();
             return $tag->$handle($arr);  // 执行标签的方法
         }
+    }
+
+    // 对数据explode的方法
+    public function explode($delimiter, $string)
+    {
+        // twig模版默认会对传入的数据进行转码，此处要先进行解码
+        $delimiter = html_entity_decode($delimiter);
+        $string = html_entity_decode($string);
+        return explode($delimiter, $string);
+    }
+
+    public function in_array($delimiter, $arr)
+    {
+        $delimiter = html_entity_decode($delimiter);
+//        $string = html_entity_decode($string);
+        return $this->in_array($delimiter, $arr);
     }
 }

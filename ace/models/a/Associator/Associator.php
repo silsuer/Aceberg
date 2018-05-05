@@ -8,8 +8,10 @@
 
 namespace Ace\models\a\Associator;
 
-
+use Illuminate\Database\Capsule\Manager as DB;
 use Ace\plugins\a\ModelManager\BaseModel;
+use App\Anchor;
+use Illuminate\Database\Schema\Blueprint;
 
 class Associator extends BaseModel
 {
@@ -73,8 +75,23 @@ class Associator extends BaseModel
 
     public function install()
     {
+        // 如果没有这张表的话，建立
+        if(!DB::schema()->hasTable('associator_config')){
+            DB::schema()->create('associator_config',function (Blueprint $table){
+               // 模块表名，模块id，模块配置
+                $table->increments('id');
+                $table->string('table')->comment('会员模块对应的表名');
+                $table->integer('module_id')->comment('会员模块对应的id');
+                $table->text('config')->nullable()->comment('模块的配置项，比如登陆时的字段，注册字段，辅助登陆方式等');
+            });
+        }else{
+            echo "\n 存在accociator_config会员模型配置表，已跳过......";
+        }
         // 安装的时候，建立一张存储每一个会员模块配置的表，在添加模块的时候，触发一个函数，在模块配置表中也加一项，默认写一些配置
-
+        Anchor::mount('after_add_module',function (\swoole_http_request $request = null){
+           // 添加完成模块后触发，初始化添加完成的模块的配置信息  遍历模块表，根据模块表搜索会员模块配置表
+            
+        });
         parent::install();
     }
 }
