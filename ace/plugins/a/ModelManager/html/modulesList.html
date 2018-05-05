@@ -222,7 +222,7 @@
             var $ = layui.jquery;
             // //转换静态表格
             table.init('moduleTble', {
-                id = 'idTable'
+                id : 'idTable'
             });
 
             form.on('select', function (data) {
@@ -258,7 +258,7 @@
                     var checkStatus = table.checkStatus('idTable'),
                         data = checkStatus.data;
                     id = data[0].id;
-                    layer.msg(id);
+                    window.location.href='/p.a_ModelManager.modifyModule?module_id='+id;
                 },
                 isAll: function () { //验证是否全选 
                     var checkStatus = table.checkStatus('idTable');
