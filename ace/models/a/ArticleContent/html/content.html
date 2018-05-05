@@ -45,7 +45,7 @@
 
         table.render({
             elem: '#table', //指定原始表格元素选择器（推荐id选择器）
-            'url': "{{ace.makeUrl('a_getArticleContent')}}?module_id=" + {{info.id}} ,
+            'url': "{{ace.makeUrl('a_getArticleContent','handle',{'module_id':info.id})}}" ,
             'limit': '30',
             'page':true,  // 开启分页
             cols: [

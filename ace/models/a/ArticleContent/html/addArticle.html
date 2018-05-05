@@ -174,13 +174,21 @@
                 $.post("{{ace.makeUrl('a_addArticleContent','handle',{'module_id':info.id})}}", {
                     "data": d
                 }, function (d) {
+                    console.log(d);
                     d = JSON.parse(d);
                     if (d.status == 200) {
                         layer.msg("添加成功！！", {
                             icon: 6
                         }, function () {
+                            parent.window.location.reload();  // 刷新父页面
                            cancelIframe();  // 关掉这个页面
                         })
+                    }else{
+                        // 添加失败，弹出添加失败原因
+                        var data = d.data;
+                        for(var i=0;i<data.length;i++){
+                            layer.msg(data[i],{icon:5});
+                        }
                     }
                 })
             })
