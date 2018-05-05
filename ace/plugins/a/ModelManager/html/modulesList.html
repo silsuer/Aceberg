@@ -23,37 +23,37 @@
 
     <div class="layui-form">
         <blockquote class="layui-elem-quote quoteBox">
-
             <div class="layui-btn-group">
-                <button class="layui-btn">
+
+                <button class="layui-btn" data-type="add_to_contentMenu">
                     <i class="layui-icon">&#xe608;</i> 添加到内容菜单
                 </button>
 
-                <button class="layui-btn layui-btn-danger">
+                <button class="layui-btn layui-btn-danger" data-type="delete_from_contentMenu">
                     <i class="layui-icon">&#xe640;</i> 从内容菜单中删除
                 </button>
 
-                <button class="layui-btn">
+                <button class="layui-btn" data-type="moduleAdd">
                     <i class="layui-icon">&#xe608;</i> 添加
                 </button>
 
-                <button data-type="moduleModify" class="layui-btn">
+                <button class="layui-btn" data-type="moduleModify">
                     <i class="layui-icon">&#xe642;</i> 修改
                 </button>
 
-                <button class="layui-btn layui-btn-danger">
+                <button class="layui-btn layui-btn-danger" data-type="moduleDelete">
                     <i class="layui-icon">&#xe640;</i> 删除
                 </button>
 
-                <button class="layui-btn layui-btn-primary">
+                <button class="layui-btn layui-btn-primary" data-type="moduleHide">
                     隐藏
                 </button>
 
-                <button class="layui-btn layui-btn-primary">
+                <button class="layui-btn layui-btn-primary" data-type="moduleDisable">
                     禁用
                 </button>
 
-                <button class="layui-btn">
+                <button class="layui-btn" data-type="moduleActive">
                     激活
                 </button>
 
@@ -222,7 +222,7 @@
             var $ = layui.jquery;
             // //转换静态表格
             table.init('moduleTble', {
-                id : 'idTable'
+                id: 'idTable'
             });
 
             form.on('select', function (data) {
@@ -230,40 +230,53 @@
             })
 
 
+
+            // 从选中行中提取id
+            function getArrID() {
+                var checkStatus = table.checkStatus('idTable');
+                var data = checkStatus.data;
+                var arrID = [];
+                for (let i of data) {
+                    arrID.push(data[i].id);
+                }
+                return arrID;
+            };
+
             // 监听checkbox复选框
-            // table.on('checkbox(moduleTble)', function (obj) {
-            //     var arr_checkedRow = JSON.parse(localStorage.arr_checkedRow);
-            //     if (obj.type == 'one') {
-            //         var id = obj.data[0].id;
-            //         if (obj.checked) {
-            //             arr_checkedRow.push(id);
-
-            //         } else {
-            //             var index = arr_checkedRow.indexOf(id);
-            //             arr_checkedRow.splice(index, 1);
-            //         }
-            //         localStorage.checkedRow = JSON.stringify(arr_checkedRow);
-            //     } else if (obj.type == 'all') {
-            //         if (obj.checked) {
-            //             for (let i of arr_checkedRow) {
-
-            //             }
-            //         } else {
-            //             arr_checkedRow.splice(0, arr_checkedRow.length);
-            //         }
-            //     }
-            // })
             var active = {
-                moduleModify: function () { //获取选中数据
-                    var checkStatus = table.checkStatus('idTable'),
-                        data = checkStatus.data;
-                    id = data[0].id;
-                    window.location.href='/p.a_ModelManager.modifyModule?module_id='+id;
+
+                add_to_contentMenu: function () { //添加到内容菜单
+                    var arrID = getArrID();
+                    batchOperation('add_to_contentMenu', arrID);
                 },
-                isAll: function () { //验证是否全选 
+                delete_from_contentMenu: function () { //从内容菜单中删除
+                    var arrID = getArrID();
+                    batchOperation('delete_from_contentMenu', arrID);
+                },
+                moduleAdd: function () { //添加
+                    window.location.href = '/p.a_ModelManager.addModule';
+                },
+                moduleModify: function () { //获取选中数据
                     var checkStatus = table.checkStatus('idTable');
-                    layer.msg(checkStatus.isAll ?
-                        '全选' : '未全选')
+                    var data = checkStatus.data;
+                    var id = data[0].id;
+                    window.location.href = '/p.a_ModelManager.modifyModule?module_id=' + id;
+                },
+                moduleDelete: function () { //删除
+                    var arrID = getArrID();
+                    batchOperation('moduleDelete', arrID);
+                },
+                moduleHide: function () { //隐藏
+                    var arrID = getArrID();
+                    batchOperation('moduleHide', arrID);
+                },
+                moduleDisable: function () { //禁用
+                    var arrID = getArrID();
+                    batchOperation('moduleDisable', arrID);
+                },
+                moduleActive: function () { //激活
+                    var arrID = getArrID();
+                    batchOperation('moduleActive', arrID);
                 }
             };
             $('.layui-btn-group .layui-btn').on('click', function () {
@@ -271,6 +284,10 @@
                 active[type] ? active[type].call(this) :
                     '';
             });
+
+
+
+            function batchOperation(operation, arrID) {};
 
         })
     </script>
