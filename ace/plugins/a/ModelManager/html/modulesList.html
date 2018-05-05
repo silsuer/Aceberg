@@ -21,219 +21,223 @@
 
 
 
-<div class="layui-form">
-    <blockquote class="layui-elem-quote quoteBox">
+    <div class="layui-form">
+        <blockquote class="layui-elem-quote quoteBox">
 
-        <button class="layui-btn">
-            <i class="layui-icon">&#xe608;</i> 添加到内容菜单
-        </button>
+            <button class="layui-btn">
+                <i class="layui-icon">&#xe608;</i> 添加到内容菜单
+            </button>
 
-        <button class="layui-btn layui-btn-danger">
-            <i class="layui-icon">&#xe640;</i> 从内容菜单中删除
-        </button>
+            <button class="layui-btn layui-btn-danger">
+                <i class="layui-icon">&#xe640;</i> 从内容菜单中删除
+            </button>
 
-        <button onclick="window.location.href='/p.a_ModelManager.addModule'" class="layui-btn">
-            <i class="layui-icon">&#xe608;</i> 添加
-        </button>
+            <button onclick="window.location.href='/p.a_ModelManager.addModule'" class="layui-btn">
+                <i class="layui-icon">&#xe608;</i> 添加
+            </button>
 
-        <button onclick="modifyModule()" class="layui-btn">
-            <i class="layui-icon">&#xe642;</i> 修改
-        </button>
+            <button onclick="modifyModule()" class="layui-btn">
+                <i class="layui-icon">&#xe642;</i> 修改
+            </button>
 
-        <button class="layui-btn layui-btn-danger">
-            <i class="layui-icon">&#xe640;</i> 删除
-        </button>
+            <button class="layui-btn layui-btn-danger">
+                <i class="layui-icon">&#xe640;</i> 删除
+            </button>
 
-        <button class="layui-btn layui-btn-primary">
-            隐藏
-        </button>
+            <button class="layui-btn layui-btn-primary">
+                隐藏
+            </button>
 
-        <button class="layui-btn layui-btn-primary">
-            禁用
-        </button>
+            <button class="layui-btn layui-btn-primary">
+                禁用
+            </button>
 
-        <button class="layui-btn">
-            激活
-        </button>
-
-
-    </blockquote>
-</div>
+            <button class="layui-btn">
+                激活
+            </button>
 
 
-<table class="layui-table" lay-filter="test">
-    <thead>
-    <tr>
-        <th lay-data="{checkbox:true}"></th>
-        <th lay-data="{field:'id'}">ID</th>
-        <th lay-data="{field:'name'}">名称</th>
-        <th lay-data="{field:'englishTag'}">英文标识</th>
-        <th lay-data="{field:'description'}">描述</th>
-        <th lay-data="{field:'status'}">状态</th>
-        <th lay-data="{field:'operation'}">操作</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% set info = ace.tag('a_getModulesList') %}
-
-    {% for n in info %}
-    <tr>
-        <td>
-
-            <input type="checkbox" name="" lay-skin="primary">
-
-        </td>
-        <td>
-            <div>{{n.id}}</div>
-        </td>
-        <td>
-            <div>{{n.name}}</div>
-        </td>
-        <td>
-            <div>{{n.target}}</div>
-        </td>
-        <td>
-            <div>{{n.description}}</div>
-        </td>
-        <td>
-            <div>{{n.status}}</div>
-        </td>
-
-        <td>
-            <div>
-
-                <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
-
-                {% if n.map %}
-                <div class="layui-form">
-                      <!-- /m.Associator.list?module_id=5 -->
-                    <select>
-                        <option value="">更多操作</option>
-                        {% for m in n.map %}
-                        <option value="/m.{{n.model_name}}.{{m.page}}?module_id={{n.id}}">{{m.name}}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                {% endif %}
-            </div>
-        </td>
-    </tr>
-
-    {% if n.sub %}
-    {% for nn in n.sub %}
-    <tr>
-        <td>
-
-            <input type="checkbox" name="" lay-skin="primary">
-
-        </td>
-        <td>
-            <div>{{nn.id}}</div>
-        </td>
-        <td>
-            <div>|--{{nn.name}}</div>
-        </td>
-        <td>
-            <div>{{nn.target}}</div>
-        </td>
-        <td>
-            <div>{{nn.description}}</div>
-        </td>
-        <td>
-            <div>{{nn.status}}</div>
-        </td>
-
-        <td>
-            <div>
-
-                <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
-
-                {% if nn.map %}
-                <div class="layui-form">
-
-                    <select>
-                        <option value="">更多操作</option>
-                        {% for mm in nn.map %}
-                        <option value="/m.{{nn.model_name}}.{{mm.page}}?module_id={{nn.id}}">{{mm.name}}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                {% endif %}
-            </div>
-        </td>
-    </tr>
-    {% if nn.sub %}
-    {% for nnn in nn.sub %}
-    <tr>
-        <td>
-
-            <input type="checkbox" name="" lay-skin="primary">
-
-        </td>
-        <td>
-            <div>{{nnn.id}}</div>
-        </td>
-        <td>
-            <div>&nbsp;&nbsp;&nbsp;|--{{nnn.name}}</div>
-        </td>
-        <td>
-            <div>{{nnn.target}}</div>
-        </td>
-        <td>
-            <div>{{nnn.description}}</div>
-        </td>
-        <td>
-            <div>{{nnn.status}}</div>
-        </td>
-
-        <td>
-            <div>
-
-                <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
-
-                {% if nnn.map %}
-                <div class="layui-form">
-
-                    <select>
-                        <option value="">更多操作</option>
-                        {% for mmm in nnn.map %}
-                        <option value="/m.{{nnn.model_name}}.{{mmm.page}}?module_id={{nnn.id}}">{{mmm.name}}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                {% endif %}
-            </div>
-        </td>
-    </tr>
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
-    </tbody>
-</table>
+        </blockquote>
+    </div>
 
 
-<script src="{{data_path}}/layui/layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+    <table class="layui-table" lay-filter="moduleTble">
+        <thead>
+            <tr>
+                <th lay-data="{checkbox:true}"></th>
+                <th lay-data="{field:'id'}">ID</th>
+                <th lay-data="{field:'name'}">名称</th>
+                <th lay-data="{field:'englishTag'}">英文标识</th>
+                <th lay-data="{field:'description'}">描述</th>
+                <th lay-data="{field:'status'}">状态</th>
+                <th lay-data="{field:'operation'}">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set info = ace.tag('a_getModulesList') %} {% for n in info %}
+            <tr>
+                <td>
 
-<script>
-    layui.use(['table','form'], function () {
-        var table = layui.table;
-        var form = layui.form;
-        // //转换静态表格
-        table.init('test');
+                    <input type="checkbox" name="" lay-skin="primary">
 
-        form.on('select',function (data) {
-            window.location.href = data.value;
+                </td>
+                <td>
+                    <div>{{n.id}}</div>
+                </td>
+                <td>
+                    <div>{{n.name}}</div>
+                </td>
+                <td>
+                    <div>{{n.target}}</div>
+                </td>
+                <td>
+                    <div>{{n.description}}</div>
+                </td>
+                <td>
+                    <div>{{n.status}}</div>
+                </td>
+
+                <td>
+                    <div>
+
+                        <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
+
+                        {% if n.map %}
+                        <div class="layui-form">
+                            <!-- /m.Associator.list?module_id=5 -->
+                            <select>
+                                <option value="">更多操作</option>
+                                {% for m in n.map %}
+                                <option value="/m.{{n.model_name}}.{{m.page}}?module_id={{n.id}}">{{m.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+
+            {% if n.sub %} {% for nn in n.sub %}
+            <tr>
+                <td>
+
+                    <input type="checkbox" name="" lay-skin="primary">
+
+                </td>
+                <td>
+                    <div>{{nn.id}}</div>
+                </td>
+                <td>
+                    <div>|--{{nn.name}}</div>
+                </td>
+                <td>
+                    <div>{{nn.target}}</div>
+                </td>
+                <td>
+                    <div>{{nn.description}}</div>
+                </td>
+                <td>
+                    <div>{{nn.status}}</div>
+                </td>
+
+                <td>
+                    <div>
+
+                        <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
+
+                        {% if nn.map %}
+                        <div class="layui-form">
+
+                            <select>
+                                <option value="">更多操作</option>
+                                {% for mm in nn.map %}
+                                <option value="/m.{{nn.model_name}}.{{mm.page}}?module_id={{nn.id}}">{{mm.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+            {% if nn.sub %} {% for nnn in nn.sub %}
+            <tr>
+                <td>
+
+                    <input type="checkbox" name="" lay-skin="primary">
+
+                </td>
+                <td>
+                    <div>{{nnn.id}}</div>
+                </td>
+                <td>
+                    <div>&nbsp;&nbsp;&nbsp;|--{{nnn.name}}</div>
+                </td>
+                <td>
+                    <div>{{nnn.target}}</div>
+                </td>
+                <td>
+                    <div>{{nnn.description}}</div>
+                </td>
+                <td>
+                    <div>{{nnn.status}}</div>
+                </td>
+
+                <td>
+                    <div>
+
+                        <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
+
+                        {% if nnn.map %}
+                        <div class="layui-form">
+
+                            <select>
+                                <option value="">更多操作</option>
+                                {% for mmm in nnn.map %}
+                                <option value="/m.{{nnn.model_name}}.{{mmm.page}}?module_id={{nnn.id}}">{{mmm.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+            {% endfor %} {% endif %} {% endfor %} {% endif %} {% endfor %}
+        </tbody>
+    </table>
+
+
+    <script src="{{data_path}}/layui/layui.js" charset="utf-8"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+
+    <script>
+        layui.use(['table', 'form'], function () {
+            var table = layui.table;
+            var form = layui.form;
+            // //转换静态表格
+            table.init('moduleTble');
+
+            form.on('select', function (data) {
+                window.location.href = data.value;
+            })
+
+
+            // 监听checkbox复选框
+            form.on('checkbox(moduleTble)', function (obj) {
+                if (obj.type == one) {
+                    if (obj.checked) {
+                        localStorage.setItem('checkedRow', obj.data);
+                    }
+                }
+            })
+
+
+
+            var modifyModule = function () {
+                // 把指向修改路径
+
+            }
         })
-
-        var modifyModule = function() {
-           // 把指向修改路径
-
-        }
-    })
-</script>
+    </script>
 </body>
 
 </html>
