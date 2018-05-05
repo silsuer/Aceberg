@@ -224,10 +224,10 @@
 
             // 监听checkbox复选框
             table.on('checkbox(moduleTble)', function (obj) {
-                layer.msg('checkbox!');
                 if (obj.type == 'one') {
                     if (obj.checked) {
-                        localStorage.setItem('checkedRow', obj.data);
+                        console.log(obj.data);
+                        localStorage.setItem('checkedRow', obj.data.id);
                     }
                 }
             })
