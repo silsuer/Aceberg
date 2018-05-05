@@ -22,46 +22,51 @@
 
 
     <div class="layui-form">
-        <blockquote class="layui-elem-quote quoteBox layui-btn-group">
+        <blockquote class="layui-elem-quote quoteBox">
 
-            <button class="layui-btn">
-                <i class="layui-icon">&#xe608;</i> 添加到内容菜单
-            </button>
+            <div class="layui-btn-group">
+                <button class="layui-btn">
+                    <i class="layui-icon">&#xe608;</i> 添加到内容菜单
+                </button>
 
-            <button class="layui-btn layui-btn-danger">
-                <i class="layui-icon">&#xe640;</i> 从内容菜单中删除
-            </button>
+                <button class="layui-btn layui-btn-danger">
+                    <i class="layui-icon">&#xe640;</i> 从内容菜单中删除
+                </button>
 
-            <button class="layui-btn">
-                <i class="layui-icon">&#xe608;</i> 添加
-            </button>
+                <button class="layui-btn">
+                    <i class="layui-icon">&#xe608;</i> 添加
+                </button>
 
-            <button data-type="moduleModify" class="layui-btn">
-                <i class="layui-icon">&#xe642;</i> 修改
-            </button>
+                <button data-type="moduleModify" class="layui-btn">
+                    <i class="layui-icon">&#xe642;</i> 修改
+                </button>
 
-            <button class="layui-btn layui-btn-danger">
-                <i class="layui-icon">&#xe640;</i> 删除
-            </button>
+                <button class="layui-btn layui-btn-danger">
+                    <i class="layui-icon">&#xe640;</i> 删除
+                </button>
 
-            <button class="layui-btn layui-btn-primary">
-                隐藏
-            </button>
+                <button class="layui-btn layui-btn-primary">
+                    隐藏
+                </button>
 
-            <button class="layui-btn layui-btn-primary">
-                禁用
-            </button>
+                <button class="layui-btn layui-btn-primary">
+                    禁用
+                </button>
 
-            <button class="layui-btn">
-                激活
-            </button>
+                <button class="layui-btn">
+                    激活
+                </button>
+
+            </div>
+
+
 
 
         </blockquote>
     </div>
 
 
-    <table class="layui-table" lay-data="{id='idTable'}" lay-filter="moduleTble">
+    <table class="layui-table" lay-filter="moduleTble">
         <thead>
             <tr>
                 <th lay-data="{checkbox:true}"></th>
@@ -210,13 +215,15 @@
     <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 
     <script>
-        layui.use(['layer', 'table', 'form','jquery'], function () {
+        layui.use(['layer', 'table', 'form', 'jquery'], function () {
             var layer = layui.layer;
             var table = layui.table;
             var form = layui.form;
             var $ = layui.jquery;
             // //转换静态表格
-            table.init('moduleTble');
+            table.init('moduleTble', {
+                id = 'idTable'
+            });
 
             form.on('select', function (data) {
                 window.location.href = data.value;
