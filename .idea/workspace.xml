@@ -80,11 +80,12 @@
       <file leaf-file-name="modulesList.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modulesList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-932">
-              <caret line="172" column="35" lean-forward="true" selection-start-line="172" selection-start-column="35" selection-end-line="172" selection-end-column="39" />
+            <state relative-caret-position="310">
+              <caret line="216" column="33" lean-forward="false" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="33" />
               <folding>
-                <element signature="e#5126#5132#0" expanded="true" />
-                <element signature="e#5132#5138#0" expanded="true" />
+                <element signature="e#5119#5125#0" expanded="true" />
+                <element signature="e#5125#5131#0" expanded="true" />
+                <element signature="e#5131#5137#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -624,7 +625,7 @@
       <workItem from="1524771938643" duration="84393000" />
       <workItem from="1525063494097" duration="1273000" />
       <workItem from="1525250937243" duration="13351000" />
-      <workItem from="1525402398719" duration="37596000" />
+      <workItem from="1525402398719" duration="39088000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1525251359935</created>
@@ -717,11 +718,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525514395842</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="完善">
+      <created>1525515195660</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1525515195660</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259460000" />
+    <option name="totallyTimeSpent" value="260952000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1247,11 +1255,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modulesList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-932">
-          <caret line="172" column="35" lean-forward="true" selection-start-line="172" selection-start-column="35" selection-end-line="172" selection-end-column="39" />
+        <state relative-caret-position="310">
+          <caret line="216" column="33" lean-forward="false" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="33" />
           <folding>
-            <element signature="e#5126#5132#0" expanded="true" />
-            <element signature="e#5132#5138#0" expanded="true" />
+            <element signature="e#5119#5125#0" expanded="true" />
+            <element signature="e#5125#5131#0" expanded="true" />
+            <element signature="e#5131#5137#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -32,11 +32,11 @@
                 <i class="layui-icon">&#xe640;</i> 从内容菜单中删除
             </button>
 
-            <button data-type="moduleModify" class="layui-btn">
+            <button class="layui-btn">
                 <i class="layui-icon">&#xe608;</i> 添加
             </button>
 
-            <button onclick="modifyModule()" class="layui-btn">
+            <button data-type="moduleModify" class="layui-btn">
                 <i class="layui-icon">&#xe642;</i> 修改
             </button>
 
@@ -210,10 +210,11 @@
     <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 
     <script>
-        layui.use(['layer', 'table', 'form'], function () {
+        layui.use(['layer', 'table', 'form','jquery'], function () {
             var layer = layui.layer;
             var table = layui.table;
             var form = layui.form;
+            var $ = layui.jquery;
             // //转换静态表格
             table.init('moduleTble');
 
@@ -264,14 +265,6 @@
                     '';
             });
 
-
-
-
-
-            var modifyModule = function () {
-                // 把指向修改路径
-
-            }
         })
     </script>
 </body>
