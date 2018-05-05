@@ -224,7 +224,7 @@
 
             // 监听checkbox复选框
             table.on('checkbox(moduleTble)', function (obj) {
-                layer.msg('checkbox!')
+                layer.msg('checkbox!');
                 if (obj.type == 'one') {
                     if (obj.checked) {
                         localStorage.setItem('checkedRow', obj.data);
