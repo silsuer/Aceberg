@@ -210,7 +210,8 @@
     <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 
     <script>
-        layui.use(['table', 'form'], function () {
+        layui.use(['layer', 'table', 'form'], function () {
+            var layer = layui.layer;
             var table = layui.table;
             var form = layui.form;
             // //转换静态表格
@@ -223,6 +224,7 @@
 
             // 监听checkbox复选框
             form.on('checkbox(moduleTble)', function (obj) {
+                layer.msg('checkbox!')
                 if (obj.type == 'one') {
                     if (obj.checked) {
                         localStorage.setItem('checkedRow', obj.data);
