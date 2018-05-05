@@ -43,12 +43,17 @@ class GlobalObj
         if (array_key_exists($componentName, Template::$componentsTree) && array_key_exists('namespace', Template::$componentsTree[$componentName])) {
             // 存在这个组件
 //            $comp = new Template::$componentsTree[$componentName]['namespace']();
-            $params = [];
-            foreach ($arr as $k => $v){
-                $params[] = $k.'='.$v;
+            if(!empty($arr)){
+                $params = [];
+                foreach ($arr as $k => $v){
+                    $params[] = $k.'='.$v;
+                }
+                // /c.name.handle?a=5&5=6
+                return '/c.' . $componentName . '.' . $handle . '?' . join('&',$params);
+            }else{
+                return '/c.' . $componentName . '.' . $handle;
             }
-            // /c.name.handle?a=5&5=6
-            return '/c.' . $componentName . '.' . $handle . '?' . join('&',$params);
+
         }
     }
 

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56ba4bdb-10e5-4787-a76c-bb25cbe87f87" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Validate.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modifyModule.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ace/models/a/ArticleContent/html/addArticle.html" afterPath="$PROJECT_DIR$/ace/models/a/ArticleContent/html/addArticle.html" />
-      <change beforePath="$PROJECT_DIR$/ace/models/a/ArticleContent/html/content.html" afterPath="$PROJECT_DIR$/ace/models/a/ArticleContent/html/content.html" />
-      <change beforePath="$PROJECT_DIR$/ace/plugins/a/ModelManager/html/cols_add.html" afterPath="$PROJECT_DIR$/ace/plugins/a/ModelManager/html/cols_add.html" />
+      <change beforePath="$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modulesList.html" afterPath="$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modulesList.html" />
+      <change beforePath="$PROJECT_DIR$/app/GlobalObj.php" afterPath="$PROJECT_DIR$/app/GlobalObj.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="addArticle.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addArticle.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ace/models/a/ArticleContent/html/addArticle.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="182" column="70" lean-forward="false" selection-start-line="182" selection-start-column="70" selection-end-line="182" selection-end-column="70" />
+            <state relative-caret-position="356">
+              <caret line="185" column="26" lean-forward="true" selection-start-line="185" selection-start-column="26" selection-end-line="185" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -83,9 +82,21 @@
       <file leaf-file-name="modulesList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modulesList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4278">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="282">
+              <caret line="234" column="6" lean-forward="true" selection-start-line="234" selection-start-column="6" selection-end-line="234" selection-end-column="6" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalObj.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/GlobalObj.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+              <folding>
+                <element signature="e#6#88#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,8 +104,60 @@
       <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ace/models/a/ArticleContent/html/content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-628">
-              <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            <state relative-caret-position="292">
+              <caret line="91" column="28" lean-forward="true" selection-start-line="91" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modifyModule.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modifyModule.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+              <folding>
+                <marker date="1525498257326" expanded="true" signature="4576:5758" ph="..." />
+                <marker date="1525498257326" expanded="true" signature="4627:4763" ph="..." />
+                <marker date="1525498257326" expanded="true" signature="4813:4947" ph="..." />
+                <marker date="1525498257326" expanded="true" signature="5000:5138" ph="..." />
+                <marker date="1525498257326" expanded="true" signature="5210:5728" ph="..." />
+                <marker date="1525498257326" expanded="true" signature="5299:5694" ph="..." />
+                <marker date="1525498257326" expanded="true" signature="5387:5469" ph="..." />
+                <marker date="1525498257326" expanded="true" signature="5451:5459" ph="..." />
+                <marker date="1525498257326" expanded="true" signature="5573:5655" ph="..." />
+                <marker date="1525498257326" expanded="true" signature="5637:5645" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addModule.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/addModule.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-95">
+              <caret line="173" column="68" lean-forward="true" selection-start-line="173" selection-start-column="68" selection-end-line="173" selection-end-column="68" />
+              <folding>
+                <marker date="1525259746080" expanded="true" signature="4699:5881" ph="..." />
+                <marker date="1525259746080" expanded="true" signature="4750:4886" ph="..." />
+                <marker date="1525259746080" expanded="true" signature="4936:5070" ph="..." />
+                <marker date="1525259746080" expanded="true" signature="5123:5261" ph="..." />
+                <marker date="1525259746080" expanded="true" signature="5333:5851" ph="..." />
+                <marker date="1525259746080" expanded="true" signature="5422:5817" ph="..." />
+                <marker date="1525259746080" expanded="true" signature="5510:5592" ph="..." />
+                <marker date="1525259746080" expanded="true" signature="5574:5582" ph="..." />
+                <marker date="1525259746080" expanded="true" signature="5696:5778" ph="..." />
+                <marker date="1525259746080" expanded="true" signature="5760:5768" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getModuleConfig.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ace/components/a/getModuleConfig/getModuleConfig.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -110,60 +173,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addArticleContent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ace/components/a/addArticleContent/addArticleContent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-              <folding>
-                <element signature="e#54#109#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/S/Common/functions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="113">
               <caret line="170" column="5" lean-forward="true" selection-start-line="170" selection-start-column="5" selection-end-line="170" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validatePostData.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ace/components/a/validatePostData/validatePostData.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-              <folding>
-                <element signature="e#53#96#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Validate.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Validate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlobalObj.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/GlobalObj.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-              <folding>
-                <element signature="e#6#88#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -179,8 +194,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>../..</find>
-      <find>userGrade</find>
       <find>使用</find>
       <find>$plugin</find>
       <find>layui.js</find>
@@ -209,6 +222,8 @@
       <find>demo</find>
       <find>makeu</find>
       <find>de</find>
+      <find>modifyModule</find>
+      <find>&lt;input type=&quot;checkbox&quot; name=&quot;&quot; lay-skin=&quot;primary&quot;&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>{{data_path}}/</replace>
@@ -216,6 +231,7 @@
       <replace>{{data_path}}</replace>
       <replace>$model</replace>
       <replace>&lt;td&gt;&lt;a href=&quot;#{{nn.real_name}}&quot;&gt;{{nn.name}}&lt;/a&gt;&lt;/td&gt;</replace>
+      <replace>&lt;input type=&quot;checkbox&quot; data-id=&quot;{{n.id}}&quot; name=&quot;&quot; lay-skin=&quot;primary&quot;&gt;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -229,8 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Console/Commands/DocCommand.php" />
-        <option value="$PROJECT_DIR$/ace/components/a/admin_login/description.json" />
         <option value="$PROJECT_DIR$/ace/components/a/if_login/description.json" />
         <option value="$PROJECT_DIR$/ace/components/a/updateTableConstructs/description.json" />
         <option value="$PROJECT_DIR$/ace/plugins/a/ModelManager/description.json" />
@@ -272,7 +286,6 @@
         <option value="$PROJECT_DIR$/S/Template.php" />
         <option value="$PROJECT_DIR$/ace/components/a/addArticleContent/description.json" />
         <option value="$PROJECT_DIR$/ace/components/a/validatePostData/description.json" />
-        <option value="$PROJECT_DIR$/app/GlobalObj.php" />
         <option value="$PROJECT_DIR$/ace/plugins/a/ModelManager/html/cols_add.html" />
         <option value="$PROJECT_DIR$/app/Validate.php" />
         <option value="$PROJECT_DIR$/ace/components/a/validatePostData/validatePostData.php" />
@@ -280,6 +293,9 @@
         <option value="$PROJECT_DIR$/ace/models/a/ArticleContent/html/content.html" />
         <option value="$PROJECT_DIR$/ace/components/a/getArticleContent/getArticleContent.php" />
         <option value="$PROJECT_DIR$/ace/models/a/ArticleContent/html/addArticle.html" />
+        <option value="$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modifyModule.html" />
+        <option value="$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modulesList.html" />
+        <option value="$PROJECT_DIR$/app/GlobalObj.php" />
       </list>
     </option>
   </component>
@@ -375,38 +391,30 @@
               <item name="Aceberg" type="b2602c69:ProjectViewProjectNode" />
               <item name="Aceberg" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ace" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="a" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="getArticleContent" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Aceberg" type="b2602c69:ProjectViewProjectNode" />
               <item name="Aceberg" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ace" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Aceberg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Aceberg" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ace" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="a" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Aceberg" type="b2602c69:ProjectViewProjectNode" />
               <item name="Aceberg" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ace" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="a" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ArticleContent" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ModelManager" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Aceberg" type="b2602c69:ProjectViewProjectNode" />
               <item name="Aceberg" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ace" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="a" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ArticleContent" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ModelManager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -449,7 +457,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Twig" />
-    <property name="SearchEverywhereHistoryKey" value="add&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/models/a/ArticleContent/html/addArticle.html&#10;Valida&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/Validate.php&#10;cols_add&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/ModelManager/html/cols_add.html&#10;module_cols_add&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/ModelManager/html/js/module_cols_add.js&#10;Template&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;Glo&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;getModuleInfo&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/tags/a/getModuleInfo/getModuleInfo.php&#10;Templa&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;Globa&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;Server&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/Server.php&#10;Temp&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;Com&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/Console/Commands/DocCommand.php&#10;DocC&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/Console/Commands/DocCommand.php&#10;main&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;doc&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/doc.html&#10;doc.h&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/doc.html&#10;main.h&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;Global&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;func&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;.env&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/.env&#10;main.js&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/js/main.js&#10;function&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;Tem&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;navs&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/json/navs.json&#10;index.js&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/js/index.js&#10;index&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;in&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;index.&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;Serv&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/Server.php&#10;main.ht&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;glo&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;admin_login&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/components/a/admin_login/admin_login.php&#10;global&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;functions&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;login.js&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/js/login.js&#10;ORM.php&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/ORM.php&#10;index.html&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;index.ht&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;sess&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Session.php&#10;server&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/Server.php&#10;fun&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;Config&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/config.php" />
+    <property name="SearchEverywhereHistoryKey" value="getModuleC&#9;null&#9;null&#10;addMo&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/ModelManager/html/addModule.html&#10;Glo&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;modu&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/ModelManager/html/modulesList.html&#10;add&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/models/a/ArticleContent/html/addArticle.html&#10;Valida&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/Validate.php&#10;cols_add&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/ModelManager/html/cols_add.html&#10;module_cols_add&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/ModelManager/html/js/module_cols_add.js&#10;Template&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;getModuleInfo&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/tags/a/getModuleInfo/getModuleInfo.php&#10;Templa&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;Globa&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;Server&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/Server.php&#10;Temp&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;Com&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/Console/Commands/DocCommand.php&#10;DocC&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/Console/Commands/DocCommand.php&#10;main&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;doc&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/doc.html&#10;doc.h&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/doc.html&#10;main.h&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;Global&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;func&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;.env&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/.env&#10;main.js&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/js/main.js&#10;function&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;Tem&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Template.php&#10;navs&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/json/navs.json&#10;index.js&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/js/index.js&#10;index&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;in&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;index.&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;Serv&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/Server.php&#10;main.ht&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/main.html&#10;glo&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;admin_login&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/components/a/admin_login/admin_login.php&#10;global&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/app/GlobalObj.php&#10;functions&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;login.js&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/data/js/login.js&#10;ORM.php&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/ORM.php&#10;index.html&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;index.ht&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/ace/plugins/a/AdminManager/html/index.html&#10;sess&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Session.php&#10;server&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/Server.php&#10;fun&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/functions.php&#10;Config&#9;FILE&#9;file://D:/Code/PHPCode/Aceberg/S/Common/config.php" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -502,7 +510,7 @@
       <workItem from="1524771938643" duration="84393000" />
       <workItem from="1525063494097" duration="1273000" />
       <workItem from="1525250937243" duration="13351000" />
-      <workItem from="1525402398719" duration="31254000" />
+      <workItem from="1525402398719" duration="34531000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1525251359935</created>
@@ -567,11 +575,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525488379580</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完善">
+      <created>1525496991568</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1525496991568</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253118000" />
+    <option name="totallyTimeSpent" value="256395000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,18 +640,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/images/layui.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/json/images.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ace/plugins/a/AdminManager/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3726">
@@ -919,25 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/addModule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="89" column="72" lean-forward="false" selection-start-line="89" selection-start-column="68" selection-end-line="89" selection-end-column="72" />
-          <folding>
-            <marker date="1525259746080" expanded="true" signature="4699:5881" ph="..." />
-            <marker date="1525259746080" expanded="true" signature="4750:4886" ph="..." />
-            <marker date="1525259746080" expanded="true" signature="4936:5070" ph="..." />
-            <marker date="1525259746080" expanded="true" signature="5123:5261" ph="..." />
-            <marker date="1525259746080" expanded="true" signature="5333:5851" ph="..." />
-            <marker date="1525259746080" expanded="true" signature="5422:5817" ph="..." />
-            <marker date="1525259746080" expanded="true" signature="5510:5592" ph="..." />
-            <marker date="1525259746080" expanded="true" signature="5574:5582" ph="..." />
-            <marker date="1525259746080" expanded="true" signature="5696:5778" ph="..." />
-            <marker date="1525259746080" expanded="true" signature="5760:5768" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ace/components/a/addArticleContent/description.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -968,16 +952,6 @@
           <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/GlobalObj.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1054,14 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modulesList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4278">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ace/components/a/getArticleContent/getArticleContent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1070,21 +1036,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ace/models/a/ArticleContent/html/addArticle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="185" column="26" lean-forward="true" selection-start-line="185" selection-start-column="26" selection-end-line="185" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ace/models/a/ArticleContent/html/content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-628">
-          <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="292">
+          <caret line="91" column="28" lean-forward="true" selection-start-line="91" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ace/models/a/ArticleContent/html/addArticle.html">
+    <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modifyModule.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="182" column="70" lean-forward="false" selection-start-line="182" selection-start-column="70" selection-end-line="182" selection-end-column="70" />
+        <state relative-caret-position="437">
+          <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1525498257326" expanded="true" signature="4576:5758" ph="..." />
+            <marker date="1525498257326" expanded="true" signature="4627:4763" ph="..." />
+            <marker date="1525498257326" expanded="true" signature="4813:4947" ph="..." />
+            <marker date="1525498257326" expanded="true" signature="5000:5138" ph="..." />
+            <marker date="1525498257326" expanded="true" signature="5210:5728" ph="..." />
+            <marker date="1525498257326" expanded="true" signature="5299:5694" ph="..." />
+            <marker date="1525498257326" expanded="true" signature="5387:5469" ph="..." />
+            <marker date="1525498257326" expanded="true" signature="5451:5459" ph="..." />
+            <marker date="1525498257326" expanded="true" signature="5573:5655" ph="..." />
+            <marker date="1525498257326" expanded="true" signature="5637:5645" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/modulesList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="234" column="6" lean-forward="true" selection-start-line="234" selection-start-column="6" selection-end-line="234" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/GlobalObj.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ace/plugins/a/ModelManager/html/addModule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="173" column="68" lean-forward="true" selection-start-line="173" selection-start-column="68" selection-end-line="173" selection-end-column="68" />
+          <folding>
+            <marker date="1525259746080" expanded="true" signature="4699:5881" ph="..." />
+            <marker date="1525259746080" expanded="true" signature="4750:4886" ph="..." />
+            <marker date="1525259746080" expanded="true" signature="4936:5070" ph="..." />
+            <marker date="1525259746080" expanded="true" signature="5123:5261" ph="..." />
+            <marker date="1525259746080" expanded="true" signature="5333:5851" ph="..." />
+            <marker date="1525259746080" expanded="true" signature="5422:5817" ph="..." />
+            <marker date="1525259746080" expanded="true" signature="5510:5592" ph="..." />
+            <marker date="1525259746080" expanded="true" signature="5574:5582" ph="..." />
+            <marker date="1525259746080" expanded="true" signature="5696:5778" ph="..." />
+            <marker date="1525259746080" expanded="true" signature="5760:5768" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ace/components/a/getModuleConfig/getModuleConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
