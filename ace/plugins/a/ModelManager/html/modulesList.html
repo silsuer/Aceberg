@@ -236,8 +236,8 @@
                 var checkStatus = table.checkStatus('idTable');
                 var data = checkStatus.data;
                 var arrID = [];
-                for (let i of data) {
-                    arrID.push(data[i].id);
+                for (let i=0;i< data.length;i++) {
+                    arrID.push(data[i].id.trim());
                 }
                 return arrID;
             };
@@ -287,7 +287,9 @@
 
 
 
-            function batchOperation(operation, arrID) {};
+            function batchOperation(operation, arrID) {
+                layer.alert(JSON.stringify(arrID));
+            }
 
         })
     </script>

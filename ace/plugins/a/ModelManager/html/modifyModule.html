@@ -13,14 +13,14 @@
 
 <body>
 
-
-<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-    <legend>添加模块</legend>
-</fieldset>
-
 {% set modules = ace.tag('a_getModulesList') %}
 {% set models = ace.tag('a_getModelsList','installedList') %}
-{% set info = ace.tag('a_getModuleInfo','view',{'req':request}) %}
+{% set info = ace.tag('a_getModuleInfo','view',{'request':request}) %}
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>修改 {{info.name}} 模块</legend>
+</fieldset>
+
+
 <form class="layui-form layui-form-pane">
 
     <div class="layui-form-item">
@@ -173,7 +173,7 @@
                 table.render({
                     elem: '#table', //指定原始表格元素选择器（推荐id选择器）
                     'url': "{{ace.makeUrl('a_getModuleConfig')}}?module_id=" + module_id +
-                    "&model_id=" + model_id,
+                    "&model_id=" + model_id +"&current_module_id={{info.id}}",
                     'limit': '1000',
                     cols: [
                         [{
