@@ -22,7 +22,7 @@
 
 
     <div class="layui-form">
-        <blockquote class="layui-elem-quote quoteBox">
+        <blockquote class="layui-elem-quote quoteBox layui-btn-group">
 
             <button class="layui-btn">
                 <i class="layui-icon">&#xe608;</i> 添加到内容菜单
@@ -32,7 +32,7 @@
                 <i class="layui-icon">&#xe640;</i> 从内容菜单中删除
             </button>
 
-            <button onclick="window.location.href='/p.a_ModelManager.addModule'" class="layui-btn">
+            <button data-type="moduleModify" class="layui-btn">
                 <i class="layui-icon">&#xe608;</i> 添加
             </button>
 
@@ -61,7 +61,7 @@
     </div>
 
 
-    <table class="layui-table" lay-filter="moduleTble">
+    <table class="layui-table" lay-data="{id='idTable'}" lay-filter="moduleTble">
         <thead>
             <tr>
                 <th lay-data="{checkbox:true}"></th>
@@ -82,19 +82,19 @@
 
                 </td>
                 <td>
-                  {{n.id}}
+                    {{n.id}}
                 </td>
                 <td>
-                   {{n.name}}
+                    {{n.name}}
                 </td>
                 <td>
-                   {{n.target}}
+                    {{n.target}}
                 </td>
                 <td>
-                   {{n.description}}
+                    {{n.description}}
                 </td>
                 <td>
-                  {{n.status}}
+                    {{n.status}}
                 </td>
 
                 <td>
@@ -128,13 +128,13 @@
                     {{nn.id}}
                 </td>
                 <td>
-                   |--{{nn.name}}
+                    |--{{nn.name}}
                 </td>
                 <td>
                     {{nn.target}}
                 </td>
                 <td>
-                   {{nn.description}}
+                    {{nn.description}}
                 </td>
                 <td>
                     {{nn.status}}
@@ -167,19 +167,19 @@
 
                 </td>
                 <td>
-                   {{nnn.id}}
+                    {{nnn.id}}
                 </td>
                 <td>
-                  &nbsp;&nbsp;&nbsp;|--{{nnn.name}}
+                    &nbsp;&nbsp;&nbsp;|--{{nnn.name}}
                 </td>
                 <td>
-                   {{nnn.target}}
+                    {{nnn.target}}
                 </td>
                 <td>
-                   {{nnn.description}}
+                    {{nnn.description}}
                 </td>
                 <td>
-                   {{nnn.status}}
+                    {{nnn.status}}
                 </td>
 
                 <td>
@@ -223,14 +223,48 @@
 
 
             // 监听checkbox复选框
-            table.on('checkbox(moduleTble)', function (obj) {
-                if (obj.type == 'one') {
-                    if (obj.checked) {
-                        console.log(obj.data);
-                        localStorage.setItem('checkedRow', obj.data.id);
-                    }
+            // table.on('checkbox(moduleTble)', function (obj) {
+            //     var arr_checkedRow = JSON.parse(localStorage.arr_checkedRow);
+            //     if (obj.type == 'one') {
+            //         var id = obj.data[0].id;
+            //         if (obj.checked) {
+            //             arr_checkedRow.push(id);
+
+            //         } else {
+            //             var index = arr_checkedRow.indexOf(id);
+            //             arr_checkedRow.splice(index, 1);
+            //         }
+            //         localStorage.checkedRow = JSON.stringify(arr_checkedRow);
+            //     } else if (obj.type == 'all') {
+            //         if (obj.checked) {
+            //             for (let i of arr_checkedRow) {
+
+            //             }
+            //         } else {
+            //             arr_checkedRow.splice(0, arr_checkedRow.length);
+            //         }
+            //     }
+            // })
+            var active = {
+                moduleModify: function () { //获取选中数据
+                    var checkStatus = table.checkStatus('idTable'),
+                        data = checkStatus.data;
+                    id = data[0].id;
+                    layer.msg(id);
+                },
+                isAll: function () { //验证是否全选 
+                    var checkStatus = table.checkStatus('idTable');
+                    layer.msg(checkStatus.isAll ?
+                        '全选' : '未全选')
                 }
-            })
+            };
+            $('.layui-btn-group .layui-btn').on('click', function () {
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) :
+                    '';
+            });
+
+
 
 
 
