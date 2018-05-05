@@ -223,7 +223,7 @@
 
             // 监听checkbox复选框
             form.on('checkbox(moduleTble)', function (obj) {
-                if (obj.type == one) {
+                if (obj.type == 'one') {
                     if (obj.checked) {
                         localStorage.setItem('checkedRow', obj.data);
                     }
