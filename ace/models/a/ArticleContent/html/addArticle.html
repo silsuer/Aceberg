@@ -132,11 +132,80 @@
 
     {% endif %}
 
+    {% if type[0]== 'custom' %}
+
+    {% set custom=ace.parseJson(type[1]) %}
+
+    {% if custom.name=='custom_cols' %}
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <blockquote class="layui-elem-quote layui-quote-nm">
+                <div class="layui-row">
+                    {{custom.description}}
+                    <a id="add-cols" href="javascript:;" class="layui-btn" style="float: right;">
+                        <i class="layui-icon">&#xe608;</i> {{custom.btn}}</a>
+                </div>
+            </blockquote>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <table id="table" class="layui-table" lay-filter="tabletable">
+                <thead>
+                <tr>
+                    <th lay-data="{field:'name'}">名称</th>
+                    <th lay-data="{field:'config'}">配置</th>
+                    <th lay-data="{field:'operation'}">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {# 这里等待添加数据 #}
+                <!--<tr>-->
+                    <!--<td>名称</td>-->
+                    <!--<td>配置</td>-->
+                    <!--<td>操作</td>-->
+                <!--</tr>-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script>
+
+        layui.use(['layer','table','form'],function () {
+            var layer = layui.layer;
+            var table = layui.table;
+            var form = layui.form;
+
+            table.init('tabletable', {
+                id: 'idTable'
+            });
+
+
+            // 监听“添加字段”按钮
+            $('#add-cols').on('click', function () {
+                layer.open({
+                    type: 2,
+                    area: ['700px', '450px'],
+                    fixed: false, //不固定
+                    maxmin: true,
+                    content: '/m.a_ArticleContent.custom_cols_add'       // 文章内容模型中，自定义组件custom_cols需要用到的添加字段的页面
+                });
+
+            })
+
+        });
+
+
+    </script>
+
+    {% endif %}
+
+    {% endif %}
+
+
     {% endfor %}
-
-
-
-
 
     <div class="layui-form-item">
         <div class="layui-input-block">

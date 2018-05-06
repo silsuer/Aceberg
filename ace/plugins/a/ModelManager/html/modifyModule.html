@@ -38,10 +38,9 @@
     <div class="layui-form-item">
         <label class="layui-form-label">描述</label>
         <div class="layui-input-block">
-            <input type="text" id="description" {{info.description}} name="description" autocomplete="off" placeholder="请输入 模块描述。可选填" class="layui-input">
+            <input type="text" id="description" value="{{info.description}}"  name="description" autocomplete="off" placeholder="请输入 模块描述。可选填" class="layui-input">
         </div>
     </div>
-
     <div class="layui-form-item">
         <label class="layui-form-label">上级模块</label>
         <div class="layui-input-block">
@@ -98,9 +97,9 @@
     <a class="layui-btn layui-btn-xs" lay-event="edit">
         <i class="layui-icon">&#xe642;</i> 编辑</a>
     <a class="layui-btn layui-btn-xs moveUp">
-        <i class="layui-icon">&#xe619;</i> 上移</a>
+        上移</a>
     <a class="layui-btn layui-btn-xs moveDown">
-        <i class="layui-icon">&#xe61a;</i> 下移</a>
+        下移</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">
         <i class="layui-icon">&#xe640;</i> 删除</a>
 </script>
@@ -151,6 +150,15 @@
             layer = layui.layer,
             table = layui.table,
             $ = layui.jquery;
+
+        // $(document).ready(function () {
+        //    getConfig();
+        // });
+
+        setTimeout(function (args) {
+            getConfig();
+        },1000)
+
         // 监听select选择事件
         form.on('select(superiorModule)', function (data) {
             getConfig();

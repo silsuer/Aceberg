@@ -58,6 +58,12 @@ class GlobalObj
     }
 
 
+    // 把字符串转为json对象
+    public  function parseJson($string){
+        return json_decode($string,true);
+    }
+
+
     public function getContent($dir)
     {
         $path = root_path() . $dir;
