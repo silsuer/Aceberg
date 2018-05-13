@@ -18,7 +18,7 @@
 			body, html {
 				height: 100%;
 				font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
-				background: url(images/reg_bg4.jpg) no-repeat;
+				background: url({{current_path}}/images//reg_bg4.jpg) no-repeat;
 				background-size: 100% 100%;
 				background-attachment: fixed;
 			}
@@ -184,7 +184,7 @@
 				text-align: center;
 				font-size: 18px;
 			}
-			
+
 			.rm img {
 				margin: 30px auto 0;
 			}
@@ -219,7 +219,7 @@
 				width: 32px;
 				height: 32px;
 				display: block;
-				background: url(images/warn_error.png) no-repeat;
+				background: url({{current_path}}/images//warn_error.png) no-repeat;
 				background-position: 0;
 				transform: scale(0.7);
 				-ms-transform: scale(0.7);
@@ -230,67 +230,67 @@
 			.warn .error {
 				background-position: -33px;
 			}
-		</style> 
- </head> 
- <body> 
-  <div class="container"> 
-   <div class="top"> 
-    <a href="index.html"><img class="logo" src="images/logo_wrz2.png"></a> 
+		</style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="top">
+    <a href="index.html"><img class="logo" src="{{current_path}}/images//logo_wrz2.png"></a>
     <div class="tle">
      欢 迎 注 册
-    </div> 
+    </div>
     <div class="t-right">
-      已有帐号？，请&nbsp;&nbsp; 
-     <a href="login.html" class="login-btn"><img src="images/reg_login.png" width="20" height="20">&nbsp;登录</a> 
-    </div> 
-   </div> 
-   <div class="regBox"> 
-    <div class="form_box"> 
+      已有帐号？，请&nbsp;&nbsp;
+     <a href="login.html" class="login-btn"><img src="{{current_path}}/images//reg_login.png" width="20" height="20">&nbsp;登录</a>
+    </div>
+   </div>
+   <div class="regBox">
+    <div class="form_box">
      <label>手&nbsp;机&nbsp;号&nbsp;码</label>
-     <input type="text" id="phone" placeholder="您的手机号码" maxlength="11"> 
-     <div class="warn"> 
-      <span></span>仅支持11位数的手机号码，注册后无法修改 
-     </div> 
-    </div> 
-    <div class="form_box"> 
+     <input type="text" id="phone" placeholder="您的手机号码" maxlength="11">
+     <div class="warn">
+      <span></span>仅支持11位数的手机号码，注册后无法修改
+     </div>
+    </div>
+    <div class="form_box">
      <label>设&nbsp;置&nbsp;密&nbsp;码</label>
-     <input type="password" id="pwd" placeholder="不低于6位数" maxlength="12"> 
-     <div class="warn"> 
-      <span></span>建议使用字母、数字和符号两种及以上的组合，6-12个字符 
-     </div> 
-    </div> 
-    <div class="form_box"> 
+     <input type="password" id="pwd" placeholder="不低于6位数" maxlength="12">
+     <div class="warn">
+      <span></span>建议使用字母、数字和符号两种及以上的组合，6-12个字符
+     </div>
+    </div>
+    <div class="form_box">
      <label>确&nbsp;认&nbsp;密&nbsp;码</label>
-     <input type="password" id="pwd-t" placeholder="请再次输入密码" maxlength="12"> 
-     <div class="warn"> 
-      <span></span>请再次输入密码 
-     </div> 
-    </div> 
-    <div class="form_box"> 
+     <input type="password" id="pwd-t" placeholder="请再次输入密码" maxlength="12">
+     <div class="warn">
+      <span></span>请再次输入密码
+     </div>
+    </div>
+    <div class="form_box">
      <label>联&nbsp;系 &nbsp; Q &nbsp;Q</label>
-     <input type="text" id="qq" placeholder="您常用的QQ号码" maxlength="12"> 
-     <div class="warn"> 
-      <span></span>请填写您常使用的QQ号码，注册后无法修改 
-     </div> 
-    </div> 
-    <div class="form_agree"> 
-     <input type="checkbox" checked>我已阅读并同意 
-     <a href="#">《万人赚服务协议》</a> 
-    </div> 
-    <div class="form_box" style="margin: 0; border: 0;"> 
-     <button id="reg-btn" type="submit">立 即 注 册</button> 
-    </div> 
-   </div> 
+     <input type="text" id="qq" placeholder="您常用的QQ号码" maxlength="12">
+     <div class="warn">
+      <span></span>请填写您常使用的QQ号码，注册后无法修改
+     </div>
+    </div>
+    <div class="form_agree">
+     <input type="checkbox" checked>我已阅读并同意
+     <a href="#">《万人赚服务协议》</a>
+    </div>
+    <div class="form_box" style="margin: 0; border: 0;">
+     <button id="reg-btn" type="submit">立 即 注 册</button>
+    </div>
+   </div>
 <!--
-   <div class="cooperation"> 
-    <div class="rm"> 
-     <p>第三方账号一键登录</p> 
-     <a href="wxlogin.aspx"><img src="images/wx_logo.png"></a> 
+   <div class="cooperation">
+    <div class="rm">
+     <p>第三方账号一键登录</p>
+     <a href="wxlogin.aspx"><img src="{{current_path}}/images//wx_logo.png"></a>
     </div> 
    </div> 
 -->
   </div> 
-  <script src="js/jquery-1.9.min.js"></script> 
+  <script src="{{current_path}}/js/jquery1.9.1.js"></script>
   <script>
 			var isMobile=/^(?:13\d|15\d|18\d|17\d|14\d)\d{5}(\d{3}|\*{3})$/;
 			$('.yzCode').attr('src', './ashxn/member.ashx?type=vcode&' + (new Date().getTime().toString()));
@@ -344,22 +344,27 @@
 					$('#pwd-t').siblings('.warn').html('<span class="error"></span>两次密码输入不一致').css('color', '#e22').addClass('sin');
 					return ;
 				}
-				
-				 $.post('./ashxn/member.ashx', 'type=reg&name=' + $('#phone').val() + '&pwd=' + $('#pwd').val() + '&qq=' + $('#qq').val() + '&vcode=' + $('#keyCode').val(), function (v) {
-		            if (v[0].code != '1') $('#yzCode').click();
-		            if (tips(v[0].code, '注册不成功！')) {
-		                var rurl = getQueryString('rurl');
-		                if (rurl != null)
-		                    location.href = rurl;
-		                else {
-		                    $.post('./ashx/pay.ashx', 'get=info', function () {
-		                        location.href = './ucenter_wrz.aspx';
-		                    });
-		                }
-		            } else { 
-		            	$('#yzCode').click(); $('#keyCode').val(''); 
-		            }
-		        },'json');
+
+				// 和后端进行交互
+
+
+
+
+				 // $.post('./ashxn/member.ashx', 'type=reg&name=' + $('#phone').val() + '&pwd=' + $('#pwd').val() + '&qq=' + $('#qq').val() + '&vcode=' + $('#keyCode').val(), function (v) {
+		        //     if (v[0].code != '1') $('#yzCode').click();
+		        //     if (tips(v[0].code, '注册不成功！')) {
+		        //         var rurl = getQueryString('rurl');
+		        //         if (rurl != null)
+		        //             location.href = rurl;
+		        //         else {
+		        //             $.post('./ashx/pay.ashx', 'get=info', function () {
+		        //                 location.href = './ucenter_wrz.aspx';
+		        //             });
+		        //         }
+		        //     } else {
+		        //     	$('#yzCode').click(); $('#keyCode').val('');
+		        //     }
+		        // },'json');
 			});
 			
 			function tips(v, v1) {

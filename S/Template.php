@@ -184,7 +184,7 @@ class Template
             'request' => $req,  // 请求
             'response' => $res,  // 响应
             'data_path' => '/data',   // data路径
-            'current_path' => root_path() . '/' . self::$modelsTree[$modelName]['path'] . '/html'  // 当前路径
+            'current_path' =>  '/' . self::$modelsTree[$modelName]['path'] . '/html'  // 当前路径
         ];
 
         $res->end($twig->loadTemplate(self::$modelsTree[$modelName]['path'] . '/html/' . $page . '.html')->render($data));

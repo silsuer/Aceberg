@@ -159,18 +159,46 @@
                 </tr>
                 </thead>
                 <tbody>
-                {# 这里等待添加数据 #}
-                <!--<tr>-->
-                    <!--<td>名称</td>-->
-                    <!--<td>配置</td>-->
-                    <!--<td>操作</td>-->
-                <!--</tr>-->
                 </tbody>
             </table>
         </div>
     </div>
 
 
+    <script>
+        function renderModuleTable(data) {
+            // layer.msg(data);
+            layui.use(['jquery', 'layer', 'form'], function () {
+                var $ = layui.jquery;
+                var layer = layui.layer;
+                var form = layui.form;
+                var $tr = $(".layui-table-body.layui-table-main tbody tr:last");
+                var newHtml =
+                    `
+                         <tr data-index="${$tr.data("index")+1}" class="">
+                            <td data-field="name">
+                                <div class="layui-table-cell laytable-cell-1-name">${data.name}</div>
+                            </td>
+
+                            <td data-field="config">
+                                <div class="layui-table-cell laytable-cell-1-config">${data.info}</div>
+                            </td>
+                            <td data-field="operation" data-off="true">
+                                <div class="layui-table-cell laytable-cell-1-operation">
+                                    <a class="layui-btn layui-btn-xs" lay-event="edit">
+                                        <i class="layui-icon">&#xe642;</i> 编辑</a>
+                                    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">
+                                        <i class="layui-icon">&#xe640;</i> 删除</a>
+                                </div>
+                            </td>
+                        </tr>
+       `;
+                $(".layui-table-body.layui-table-main tbody").append(newHtml);
+                form.render();
+            })
+
+        }
+    </script>
     <script>
 
         layui.use(['layer','table','form'],function () {
@@ -182,7 +210,6 @@
                 id: 'idTable'
             });
 
-
             // 监听“添加字段”按钮
             $('#add-cols').on('click', function () {
                 layer.open({
@@ -192,12 +219,8 @@
                     maxmin: true,
                     content: '/m.a_ArticleContent.custom_cols_add'       // 文章内容模型中，自定义组件custom_cols需要用到的添加字段的页面
                 });
-
             })
-
         });
-
-
     </script>
 
     {% endif %}

@@ -31,19 +31,17 @@ a:active{
 	<div id="neirongqu">
 		<div id="logo">LOGO</div>
 		<div id="denglu">
-			<a href="login.html">注册登录</a>
+			<a href="/t.silsuer_marketing.login">注册登录</a>
 		</div>
 		<div id="daohang">
-			<a href="index.html">首页</a>
-			<a href="list.html">购买产品</a>
-			<a>新闻动态</a>
-			<a>帮助中心</a>
-			<a>推广赚钱</a>
+			<a href="/t.silsuer_marketing.index">首页</a>
+			<a href="/t.silsuer_marketing.list">购买产品</a>
+			<a href="/t.silsuer_marketing.nr_list?module_id=5">新闻动态</a>
+			<a href="/t.silsuer_marketing.nr_list?module_id=6" >帮助中心</a>
+			<a href="/t.silsuer_marketing.grzx">推广赚钱</a>
 		</div>
 	</div>
 </div>
-
-
 <div class="banner flexslider">
   <ul class="slides">
     <li><a><img src="{{current_path}}/images/banner1.jpg"/></a></li>
@@ -51,7 +49,14 @@ a:active{
 
   </ul>
 </div>
-
+<script>
+		$(function(){
+			$('.flexslider').flexslider({
+				directionNav: true,
+				pauseOnAction: false
+			});
+		});
+	</script>
 
 <div id="cplist">
 	<div id="neirongqu">
@@ -201,13 +206,5 @@ a:active{
  		<div id="beian">Copyright © 2018.  All rights reserved. 京ICP备xxxxxxx号</div>
 	</div>
 </div>
-<script>
-    $(function(){
-        $('.flexslider').flexslider({
-            directionNav: true,
-            pauseOnAction: false
-        });
-    });
-</script>
 </body>
 </html>

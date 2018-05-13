@@ -101,7 +101,14 @@
 
 <script src="{{current_path}}/js/article_cols_add.js" type="text/javascript"></script>
 
+
+
 <script>
+
+    layui.use('form',function () {
+        var form = layui.form;
+    });
+
     function cancelIframe() {
         var name = parent.layer.getFrameIndex(window.name);
         parent.layer.close(name);
