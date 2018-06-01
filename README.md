@@ -2,15 +2,6 @@
 
 开发中......
 
----
-layout:     post
-title:      "Aceberg设计思路"
-author:     "silsuer"
-header-img: "img/post-bg-re-vs-ng2.jpg"
-tags:
-    - PHP
----
-
 # Aceberg 最初构想
 
 ## 基础架构
