@@ -1,0 +1,164 @@
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td { margin:0; padding:0; font-family: "Microsoft Yahei", arial, tahoma, verdana; color:#000;}
+table { border-collapse:collapse; border-spacing:0;}
+img { border: 0 none; vertical-align: top; }
+ul, li { list-style-type: none;}
+a{text-decoration: none!important; 
+  color:#000;}
+.center{width:1000px; margin:0 auto;}
+.topnav{width:100%;  background:#fff;overflow: hidden;}
+.top{float:left; width:100%; height:56px;}
+.top .logo{float:left; height:56px;}
+.top .taobao{float:right; height:56px;}
+.top .taobao .weixin p{display:none; position:absolute; top:90px;}
+.top .taobao .weixin:hover p{display:block;}
+.nav{float:left;  height:50px; background:#1b96d5; line-height:50px;}
+.nav a{float:left; height:50px; color:#fff; padding:0 20px;}
+.nav a:hover{ background:#f4c139;}
+.nav span{float:left; color:#fff; margin:0 15px;}
+
+.banner{width:100%; float:left; height:490px; background-image:url(../images/banner.jpg); background-size:cover; background-repeat: no-repeat; background-position: center;}
+.banner .title{width:100%; float:left; text-align:center; margin:100px 0 40px 0;}
+.banner .title p{width:100%; float:left; color:#fff; font-size:35px;}
+.banner .title p font{color:#fff100;}
+.banner .title span{color:#fff; font-size:18px; padding-top:10px; width:100%; float:left;}
+.banner .bannerbtn{width:100%; float:left; padding:0 0; text-align:center; height:50px;}
+.banner .bannerbtn a{width:190px; height:50px; line-height:50px; font-size:18px; float:left; text-align:center; background:#1b96d5; color:#fff; border-radius:50px;}
+.banner .bannerbtn .btnyouhui{ margin-left:295px;}
+.banner .bannerbtn img{ margin:10px 5px 0 0;}
+.banner .bannerbtn .btnzhongbiao{ margin-left:30px;}
+.banner .bannerbtn a:hover{background:#118bca;}
+.banner .bannernav{width:900px; float:left; padding:0 50px; margin-top:30px;}
+.banner .bannernav .margin48{ margin:0 28px;}
+.banner .bannernav .down{width:150px; height:40px; padding:5px 20px; float:left; background:#00a0e9; border-radius:50px;}
+.banner .bannernav .down img{width:29px; float:left; margin-top:2px;}
+.banner .bannernav .down p{width:120px; float:right; text-align:center;}
+.banner .bannernav .down p b{width:100%; float:left; color:#fff100; font-size:18px;}
+.banner .bannernav .down p span{width:100%; float:left; font-size:14px; color:#fff;}
+
+.banner .bannernav .shipin1{width:150px; height:40px; padding:5px 20px; float:left; background:#00a0e9; border-radius:50px;}
+.banner .bannernav .shipin1 img{width:34px; float:left; margin-top:2px;}
+.banner .bannernav .shipin1 p{width:116px; float:right; text-align:center;}
+.banner .bannernav .shipin1 p b{width:100%; float:left; color:#fff100; font-size:18px;}
+.banner .bannernav .shipin1 p span{width:100%; float:left; font-size:14px; color:#fff;}
+
+.banner .bannernav .shipin2{width:150px; height:40px; padding:5px 20px; margin-top:28px; float:left; background:#fff; border-radius:50px;}
+.banner .bannernav .shipin2 img{width:34px; float:left; margin-top:2px;}
+.banner .bannernav .shipin2 p{width:116px; float:right; text-align:center;}
+.banner .bannernav .shipin2 p b{width:100%; float:left; color:#00a0e9; font-size:18px;}
+.banner .bannernav .shipin2 p span{width:100%; float:left; font-size:14px; color:#9d9999;}
+
+.banner .bannernav .czzn{width:150px; height:40px; padding:5px 20px; margin-top:28px; float:left; background:#fff; border-radius:50px;}
+.banner .bannernav .czzn img{width:40px; float:left; margin-top:2px;}
+.banner .bannernav .czzn p{width:110px; float:right; text-align:center;}
+.banner .bannernav .czzn p b{width:100%; float:left; color:#00a0e9; font-size:18px;}
+.banner .bannernav .czzn p span{width:100%; float:left; font-size:14px; color:#9d9999;}
+
+.banner .bannernav .byxz{width:150px; height:40px; padding:5px 20px; margin-top:28px; float:left; background:#fff; border-radius:50px;}
+.banner .bannernav .byxz img{width:39px; float:left; margin-top:2px;}
+.banner .bannernav .byxz p{width:110px; float:right; text-align:center;}
+.banner .bannernav .byxz p b{width:100%; float:left; color:#00a0e9; font-size:18px;}
+.banner .bannernav .byxz p span{width:100%; float:left; font-size:14px; color:#9d9999;}
+
+.main_sub1{width:100%; float:left; background:#d3d2d1; padding:20px 0;}
+.main_sub1_div{width:460px; float:left; padding:15px; background:#fff; height:300px;}
+.main_sub1_div .title{width:100%; float:left;}
+.main_sub1_div .title p{width:230px; float:left; margin-left:100px; height:40px; line-height:40px; font-size:24px; text-align:center; padding:0 15px; border-radius:40px; background:#f4c139; color:#555656;}
+.main_sub1_div .title a{font-size:14px; color:#999999; float:left; margin-left:20px;}
+.main_sub1_div .title2{width:100%; float:left; text-align:center; color:#00b4ed; font-size:14px; margin-top:5px;}
+.main_sub1_div .main{width:100%; float:left;}
+.main_sub1_div .main p{width:100%; float:left; color:#727272; font-size:14px; margin-top:10px;}
+.main_sub1_div .main b{width:100%; float:left; color:#727272; font-size:14px; margin-top:10px;}
+.main_sub1_div .news{width:100%; float:left; margin-top:10px;}
+.main_sub1_div .news li{width:220px; float:left; height:28px; line-height:28px; margin:0 5px; padding:0; border-bottom:1px dashed #666565; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.main_sub1_div .news li a{font-size:14px; color:#827e7f;}
+.main_sub1_div .news li:hover a{color:#ff0000;}
+.main_sub2{width:100%; float:left; text-align:center; background:#00a0e9;}
+.main_sub2 h3{ color:#fff; font-size:40px; margin-top:50px; font-weight:normal;}
+.main_sub2 p{ color:#fff; font-size:14px; padding:10px 0 50px 0;}
+.main_sub2 .buy{width:100%; float:left; height:465px; background:url(../images/gm_img.jpg) no-repeat top center;}
+.main_sub2 .buy img{ margin:203px 0 0 0 ;}
+
+.main_sub3{width:100%; float:left; height:490px; padding:50px 0; background-image:url(../images/zybg.jpg); background-size:cover; background-repeat: no-repeat; background-position: center;}
+.main_sub3 img{ float:left;}
+.main_sub3 .main{width:470px; float:right;}
+.main_sub3 .main h4{width:100%; float:left; text-align:center; font-size:30px; font-weight:normal; color:#555656;}
+.main_sub3 .main h4 span{font-size:18px;}
+.main_sub3 .main ul li{width:100%; float:left; margin-top:30px;}
+.main_sub3 .main ul li .number{width:45px; float:left; text-align:center; color:#fff; font-size:18px; background:#f4c139; height:45px; line-height:45px; border-radius:5px;}
+.main_sub3 .main ul li .content{width:410px; float:right;}
+.main_sub3 .main ul li .content h5{width:100%; float:left; color:#00a0e9; font-size:17px;}
+.main_sub3 .main ul li .content p{width:100%; float:left; color:#030000; font-size:14px;}
+
+.erweima{width:100%; float:left; text-align:center; padding-bottom:30px;}
+.footer{width:100%; float:left; padding:30px 0; background:#00a0e9; text-align:center; font-size:14px;max-width: 1050px;}
+.footer p{color:#fff; padding:5px 0;}
+.footer a{color:#fff;}
+.footer a:hover{color:#f4c139;}
+
+.data{width:100%; float:left; text-align:center; background:#0178ae; padding-bottom:50px; margin-top:146px;}
+.data h3{ color:#fff; font-size:40px; margin-top:50px; font-weight:normal;}
+.data p{ color:#fff; font-size:14px; padding:10px 0 50px 0;}
+.data img{width:1000px; margin-bottom:50px;}
+
+.celue{width:100%; float:left; text-align:center; padding-bottom:50px; }
+.celue h3{width:100%; float:left; color:#00a0e9; font-size:40px; margin:50px 0; font-weight:normal;}
+.celue li{width:270px; float:left; padding:15px;}
+.celue li h4{width:100%; float:left; font-size:24px;}
+.celue li p{width:100%; float:left; color:#999; margin:10px 0;}
+.celue li img{width:100%; float:left; height:380px;}
+.celue .img{width:100%; text-align:center; float:left;}
+.celue .img img{ margin-top:50px;}
+.celue h5{width:100%; float:left; color:#00a0e9; font-size:40px; margin:50px 0 0 0; font-weight:normal;}
+
+.zhongbiao{width:100%; float:left; text-align:center; padding-bottom:50px; margin-top:146px;}
+.zhongbiao h3{width:100%; float:left; color:#00a0e9; font-size:40px; margin:50px 0; font-weight:normal;}
+.zhongbiao li{width:450px; float:left; margin:20px; height:350px; overflow:hidden; border:5px solid #666565;}
+.zhongbiao li img{width:100%; float:left; min-height:350px;}
+
+.youhui{width:100%; float:left; padding-bottom:50px; margin-top:146px;}
+.youhui h3{width:100%; float:left; color:#00a0e9; font-size:40px; margin:50px 0; font-weight:normal; text-align:center;}
+.youhui .youhuimain{width:100%; float:left;}
+.youhui .youhuimain b{width:100%; float:left; margin:20px 0 10px 0; line-height:24px; font-size:24px; color:#f4c139;}
+.youhui .youhuimain p{width:100%; float:left; margin-bottom:10px; line-height:24px;}
+.youhui .youhuimain img{max-width:100%;}
+
+.rizhi{width:100%; float:left; padding-bottom:50px; margin-top:146px;}
+.rizhi h3{width:100%; float:left; color:#00a0e9; font-size:40px; margin:50px 0; font-weight:normal; text-align:center;}
+.rizhi li{width:100%; float:left; padding:15px 0; margin-bottom:50px;}
+.rizhi li h4{width:100%; float:left; font-size:20px; text-align:center; height:50px; line-height:50px; background:#296aac; color:#fff;}
+.rizhi li p{width:960px; float:left; color:#999; padding:20px 19px; line-height:24px; border:1px solid #ccc; border-top:none;}
+
+.nytopnews{width:100%; float:left; margin-top:108px; height:200px; background-image:url(../images/img2.jpg); background-color:#14052c; background-size:cover; background-repeat: no-repeat; background-position:center;}
+.nysub1{width:100%; float:left; margin-top:-61px;}
+.nysub1_sub0{width:200px; float:left; background:#fff;}
+.nysub1_sub1{width:100%; float:left;}
+.nysub1_sub1 a{width:100%; float:left; height:60px; line-height:60px; text-align:center; border-bottom:1px solid #27354f; font-size:18px; color:#666;}
+.nysub1_sub1 a:hover{color:#27354f;}
+.nysub1_sub2{width:740px; float:right; background:#fff; padding:10px 20px;}
+.nysub1_sub2 h3{width:100%; float:left; border-bottom:2px solid #ccc; padding-bottom:15px; color:#433f3e; font-size:24px; font-weight:bold; margin-bottom:10px;}
+.nysub1_sub2_content{width:100%; float:left;}
+.nysub1_sub2_content p{font-size:14px; line-height:24px; color:#727272;}
+.nysub1_sub2_content img{max-width:100%;}
+
+.news{width:100%; float:left;}
+.news li{width:100%; float:left; margin:20px 0 0 0;}
+.news li:hover .time{background:#27354f;}
+.news li .time{width:150px; float:left; height:85px; padding-top:15px; background:#212121; text-align:center; color:#fff;}
+.news li .time span{ font-size:36px; font-weight:bold;}
+.news li .title2{width:570px; float:right; color:#212121; font-size:18px; font-weight:bold; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.news li p{width:570px; float:right; margin:6px 0; color:#373737; font-size:14px; text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.news li div{width:570px; float:right; color:#727272; font-size:14px;}
+
+.news .newsname{width:100%; float:left; margin:10px 0; text-align:center; font-size:18px; font-weight:bold;}
+.news .newsdate{width:100%; float:left; margin-bottom:10px; text-align:center;}
+.news .newstext{width:100%; float:left; margin-bottom:10px; font-size:14px;}
+.news .newstext h1{font-size:24px; margin-bottom:10px; font-weight:normal; color:#444;}
+.news .newstext p{font-size:16px; margin-bottom:10px; line-height:24px; color:#727272;}
+.news .newstext img{ max-width:100%;}
+.news .newssx{width:100%; float:left; margin-bottom:10px; font-size:12px; border-top:1px solid #ccc; padding-top:10px;}
+.news .newssx a{color:#666;}
+
+.page-btn{width:100%; float:left; margin-top:20px;}
+.page-btn a{float:left; padding:5px; background:#f4f4f4; color:#444;}
+.page-btn a:hover{background:#27354f; color:#fff;}
+.page-btn .cpb{float:left; padding:5px; background:#27354f; color:#fff;}

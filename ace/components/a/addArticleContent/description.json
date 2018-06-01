@@ -1,0 +1,6 @@
+{
+  "name": "addArticleContent",
+  "namespace": "Ace\\components\\a\\addArticleContent\\addArticleContent",
+  "description": "为模块添加文章时使用，将post来的值根据传入的module_id，存入数据库",
+  "version": "1.0"
+}

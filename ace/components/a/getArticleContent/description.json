@@ -1,0 +1,6 @@
+{
+  "name": "getArticleContent",
+  "namespace": "Ace\\components\\a\\getArticleContent\\getArticleContent",
+  "description": "根据模块id，获取对应的模块表中的信息，并分页",
+  "version": "1.0"
+}

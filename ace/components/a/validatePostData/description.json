@@ -1,0 +1,6 @@
+{
+  "name": "validatePostData",
+  "namespace": "Ace\\components\\a\\validatePostData\\validatePostData",
+  "description": "目前用于文章内容模型，添加文章时，根据模块配置，对数据进行验证，返回验证信息",
+  "version": "1.0"
+}
